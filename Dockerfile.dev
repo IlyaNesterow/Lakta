@@ -1,0 +1,13 @@
+#dockerfile for a development
+FROM node:alpine
+
+WORKDIR /app
+
+COPY ./package.json ./
+RUN npm install
+COPY . .
+
+CMD ["npm", "run", "start"]
+
+#docker build -f Dockerfile.dev -t ilyanesterow/lakta .
+#docker run -v /app/node_modules -v $(pwd):/app -p 3000:3000 ilyanesterow/lakta

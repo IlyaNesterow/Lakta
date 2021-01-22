@@ -1,0 +1,13 @@
+#for running in dev environment
+version: '3'
+services:
+  frontend:
+    stdin_open: true
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - /app/node_modules
+      - .:/app

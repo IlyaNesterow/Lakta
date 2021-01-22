@@ -1,0 +1,15 @@
+services:
+  - docker
+
+before_install:
+  - docker build -t ilyanesterow/test -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true ilyanesterow/test npm run test
+
+#deploy:
+#  provider: heroku
+# api_key: $HEROKU_API_KEY
+#  on: 
+#    branch: main
+  
