@@ -7,9 +7,10 @@ before_install:
 script:
   - docker run -e CI=true ilyanesterow/test npm run test
 
-#deploy:
-#  provider: heroku
-# api_key: $HEROKU_API_KEY
-#  on: 
-#    branch: main
+deploy:
+  provider: heroku
+  api_key: $HEROKU_API_KEY
+  app: $HEROKU_APP_NAME
+  on: 
+    branch: main
   
