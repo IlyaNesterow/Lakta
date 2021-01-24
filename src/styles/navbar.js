@@ -33,6 +33,12 @@ const NAV = styled.nav`
     color: #3355ff;
   }
 
+  #logo{
+    font-size: 1.5rem;
+    color: #3355ff;
+    margin-right: 2rem;
+  }
+
   .switch {
     position: relative;
     display: inline-block;

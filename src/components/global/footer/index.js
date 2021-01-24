@@ -7,7 +7,7 @@ const Footer = () => {
   const theme = useSelector(state => state.theme)
 
   return(
-    <FOOTER theme={ theme }>
+    <FOOTER darkTheme={ theme }>
       <Languages/>
     </FOOTER>
   )

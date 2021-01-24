@@ -8,8 +8,12 @@ const Footer = styled.footer`
   height: auto; 
   padding: 1rem;
   font-family: Ubuntu, sans-serif;
-  background-color: ${ props => props.theme ? '#f9f9ff' : '#232333' };
-  box-shadow: 0 0 .1rem ${ props => props.theme ? '#222' : '#eee' };
+  background-color: ${ props => props.darkTheme ? '#232333' : '#f9f9ff' };
+  box-shadow: 0 0 .1rem ${ props => props.darkTheme ? '#eee' : '#222' };
+  div#languages{
+    display: flex;
+    justify-content: space-between;
+  }
 `
 
 export default Footer

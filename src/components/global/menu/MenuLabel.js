@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
 import setOpened from '../../../redux/actions/menu'
 
 
@@ -14,7 +15,7 @@ const Menu = () => {
         className={ opened ? 'active' : 'normal' }
         onClick={() => dispatch(setOpened(!opened))}
       >
-        Menu
+        <FontAwesomeIcon icon={ faHome }/>
       </h2>
     </div>
   )

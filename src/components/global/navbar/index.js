@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHammer } from '@fortawesome/free-solid-svg-icons'
 import Links from './Links'
 import Toggler from './ThemeToggler'
 import Nav from '../../../styles/navbar'
@@ -11,7 +13,11 @@ const Navbar = () => {
   
   return(
     <Nav darkTheme={ theme }>
-      <p>Lakta</p>
+      <FontAwesomeIcon
+        //will be replaces in future
+        id="logo"
+        icon={ faHammer }
+      />
       <MenuLabel/>
       <Links/>
       <Toggler/>

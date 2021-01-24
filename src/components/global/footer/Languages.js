@@ -20,9 +20,9 @@ const Languages = () => {
   )  
 
   return(
-    <>
+    <div id="languages">
       { langs }
-    </>
+    </div>
   )
 }
 
