@@ -12,7 +12,10 @@ const MenuTab = () => {
     <>
       {opened &&
         <Portal parent="navbar">
-          <Links id="nav-link-tab"/>
+          <Links 
+            id="nav-link-area-tab" 
+            navLinkId="nav-link-tab"
+          />
         </Portal>
       }
     </>

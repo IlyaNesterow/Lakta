@@ -4,13 +4,13 @@ import { NavLink } from 'react-router-dom'
 import content from '../../../content/navbar'
 
 
-const Links = ({ id = 'nav-link-area' }) => {
+const Links = ({ id = 'nav-link-area', navLinkId = 'nav-link' }) => {
   const lang = useSelector(state => state.lang)
   
   const links = content.titles.map(el => 
     <NavLink 
       exact
-      id="nav-link"
+      id={ navLinkId }
       activeStyle={{
         color: '#3377ff'
       }}
