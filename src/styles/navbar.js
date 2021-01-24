@@ -1,0 +1,82 @@
+import styled from 'styled-components'
+
+
+const NAV = styled.nav`
+  padding: 1rem;
+  position: sticky;
+  transition: background-color box-shadow 0.2s;
+  background-color: ${ props => props.darkTheme ? '#232323' : '#fff' };
+  box-shadow: 0 0 .15rem ${ props => props.darkTheme ? '#fff' : '#333' };
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+
+  #nav-link-area{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #nav-link{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 0 2rem;
+    color: ${ props => props.darkTheme ? '#fff' : '#333' };
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 3.6rem;
+    height: 1.8rem;
+    outline: none;
+  }
+  .switch input {
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 1.8rem;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.44rem;
+    width: 1.44rem;
+    left: .15rem;
+    bottom: .15rem;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  input:checked + .slider {
+    background-color: #fff;
+  }
+  input:checked + .slider:before {
+    background-color: #333;
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(1.8rem);
+        -ms-transform: translateX(1.8rem);
+            transform: translateX(1.8rem);
+  }
+
+  @media only screen and (max-width: 800px){
+    #nav-link-area{
+      display: none;
+    }
+  }
+`
+
+export default NAV
