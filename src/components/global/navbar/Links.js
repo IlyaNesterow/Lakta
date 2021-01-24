@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import content from '../../../content/navbar'
 
 
-const Links = () => {
+const Links = ({ id = 'nav-link-area' }) => {
   const lang = useSelector(state => state.lang)
   
   const links = content.titles.map(el => 
@@ -22,7 +22,7 @@ const Links = () => {
   )
   
   return(
-    <div id="nav-link-area">
+    <div id={ id }>
       { links }
     </div>
   )

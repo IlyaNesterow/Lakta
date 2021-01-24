@@ -17,11 +17,20 @@ const NAV = styled.nav`
   }
 
   #nav-link{
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.5rem;
     padding: 0 2rem;
     color: ${ props => props.darkTheme ? '#fff' : '#333' };
+  }
+
+  #Menu{
+    display: none;
+  }
+
+  .normal{
+    color: ${ props => props.darkTheme ? '#fff' : '#333' }
+  }
+
+  .active{
+    color: #3355ff;
   }
 
   .switch {
@@ -76,6 +85,9 @@ const NAV = styled.nav`
     #nav-link-area{
       display: none;
     }
+    #Menu{
+      display: block;
+    } 
   }
 `
 

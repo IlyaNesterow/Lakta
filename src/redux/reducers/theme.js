@@ -2,7 +2,7 @@ import types from '../types/theme'
 
 
 const themeReducer = (state = window.localStorage.getItem('theme') === 'true', action) => {
-  switch (action.type){
+  switch(action.type){
     case types.TOGGLE: 
       const newState = !state
       window.localStorage.setItem('theme', newState)
