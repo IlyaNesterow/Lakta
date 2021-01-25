@@ -14,14 +14,18 @@ const Languages = () => {
         if(lang !== lng.abbr) dispatch(change(lng.abbr))
       }}
       key={ lng.abbr }
+      className={ lng.abbr === lang ? 'current-lang' : '' }
     >
       { lng.content }
     </div>
   )  
 
   return(
-    <div id="languages">
-      { langs }
+    <div id="left-part">
+      <p>{ content.languageChoice[ lang ] + ': ' }</p>
+      <div id="languages">
+        { langs }
+      </div>
     </div>
   )
 }

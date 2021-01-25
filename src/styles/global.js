@@ -16,6 +16,10 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
   }
 
+  a{
+    text-decoration: none;
+  }
+
   div#nav-link-area-tab {
     background-color: ${ props => props.darkTheme ? 'rgba(44, 44, 44, 0.1)' : 'rgba(230, 230, 250, 0.1)' };
     backdrop-filter: blur(7px);
@@ -42,15 +46,19 @@ const GlobalStyle = createGlobalStyle`
     align-items: center;
     justify-content: center;
     background-image: url('https://lakta.s3.eu-north-1.amazonaws.com/balkoni/DSC00119.JPG');
-    background-color: ${ props => props.darkTheme ? 'rgba(0,0,0,0.4)' : 'rgba(255,255,255,0.6)' };
-    background-blend-mode: ${ props => props.darkTheme ? 'darken' : 'lighten' };
+    background-color: ${ props => props.darkTheme ? 'rgba(0,0,0,0.8)' : 'rgba(255,255,255,0.8)' };
+    background-blend-mode: overlay;
     background-size: cover;
     transition: background-color .5s;
     z-index: 2;
   }
 
+  #nav-link-tab:nth-child(1){
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/1e/San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg');
+  }
+
   #nav-link-tab:hover{
-    background-color: ${ props => props.darkTheme ? 'rgba(0,0,0,0.3)' : 'rgba(255,255,255,0.5)' };
+    background-color: ${ props => props.darkTheme ? 'rgba(0,0,0,0.2)' : 'rgba(255,255,255,0.3)' };
     /*box-shadow: ${ props => props.darkTheme ? '0 0 1rem #333 inset' : '0 0 1rem #888 inset' };*/
   }
 

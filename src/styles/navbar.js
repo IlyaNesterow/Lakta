@@ -17,7 +17,8 @@ const NAV = styled.nav`
   }
 
   #nav-link{
-    padding: 0 2rem;
+    padding: .2rem 2rem;
+    font-size: 1.2rem;
     color: ${ props => props.darkTheme ? '#fff' : '#333' };
   }
 
@@ -33,12 +34,6 @@ const NAV = styled.nav`
     color: #3355ff;
   }
 
-  #logo{
-    font-size: 1.5rem;
-    color: #3355ff;
-    margin-right: 2rem;
-  }
-
   .switch {
     position: relative;
     display: inline-block;
@@ -46,11 +41,13 @@ const NAV = styled.nav`
     height: 1.8rem;
     outline: none;
   }
+
   .switch input {
     position: absolute;
     top: -99999px;
     left: -99999px;
   }
+  
   .slider {
     position: absolute;
     cursor: pointer;

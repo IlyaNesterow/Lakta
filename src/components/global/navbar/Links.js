@@ -12,7 +12,8 @@ const Links = ({ id = 'nav-link-area', navLinkId = 'nav-link' }) => {
       exact
       id={ navLinkId }
       activeStyle={{
-        color: '#3377ff'
+        color: '#3355ff',
+        fontWeight: '900'
       }}
       to={ el.link }
       key={ el.link }
