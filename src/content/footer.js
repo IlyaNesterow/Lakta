@@ -25,7 +25,7 @@ const content = {
     ru: 'Доступные языки'
   },
   source: {
-    en: 'Source',
+    en: 'Open source',
     lv: 'Avots',
     ru: 'Источник'
   }

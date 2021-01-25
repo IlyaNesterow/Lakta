@@ -26,6 +26,10 @@ const NAV = styled.nav`
     display: none;
   }
 
+  #Menu svg{
+    margin-left: 1.5rem;
+  }
+
   .normal{
     color: ${ props => props.darkTheme ? '#fff' : '#333' }
   }

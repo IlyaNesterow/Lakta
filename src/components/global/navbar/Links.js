@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import content from '../../../content/navbar'
 
 
-const Links = ({ id = 'nav-link-area', navLinkId = 'nav-link' }) => {
+const Links = ({ id = 'nav-link-area', navLinkId = 'nav-link', onClick = () => {} }) => {
   const lang = useSelector(state => state.lang)
   
   const links = content.titles.map(el => 
@@ -15,6 +15,7 @@ const Links = ({ id = 'nav-link-area', navLinkId = 'nav-link' }) => {
         color: '#3355ff',
         fontWeight: '900'
       }}
+      onClick={ onClick }
       to={ el.link }
       key={ el.link }
     >

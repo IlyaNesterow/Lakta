@@ -1,33 +1,23 @@
 import React from 'react'
+import Logo from '../Logo'
+import { useSelector } from 'react-redux'
 import content from '../../../content/footer'
-import { useSelector, useDispatch } from 'react-redux'
-import change from '../../../redux/actions/lang' 
 
 
-const Languages = () => {
+const LaktaPart = () => {
   const lang = useSelector(state => state.lang)
-  const dispatch = useDispatch()
-
-  const langs = content.languages.map(lng => 
-    <div
-      onClick={() => {
-        if(lang !== lng.abbr) dispatch(change(lng.abbr))
-      }}
-      key={ lng.abbr }
-      className={ lng.abbr === lang ? 'current-lang' : '' }
-    >
-      { lng.content }
-    </div>
-  )  
+  const theme = useSelector(state => state.theme)
 
   return(
     <div id="left-part">
-      <p>{ content.languageChoice[ lang ] + ': ' }</p>
-      <div id="languages">
-        { langs }
-      </div>
+      <Logo 
+        fill={ theme ? '#eee' : "#333" }
+        height="65pt"
+        width="66pt"
+      />
+      <p>{ content.rightPart[lang] }</p>
     </div>
   )
 }
 
-export default Languages
+export default LaktaPart

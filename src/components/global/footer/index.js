@@ -2,9 +2,9 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 import FOOTER from '../../../styles/footer'
-import Languages from './LeftPart'
+import Languages from './RighPart'
 import MiddlePart from './MiddleElement'
-import RightPart from './LaktaPart'
+import RightPart from './LeftPart'
 
 
 const Footer = () => {

@@ -30,7 +30,7 @@ const Footer = styled.footer`
     border-radius: 1rem;
     box-shadow: 0 0 .2rem #888;
   }
-  #rightPart, #middle-part{
+  #left-part, #middle-part{
     display: flex;
     align-items: center;
   }
@@ -41,28 +41,33 @@ const Footer = styled.footer`
     margin-right: .7rem;
   }
   #middle-part svg{
-    margin-right: .5rem;
+    margin-right: .4rem;
     font-size: 1.5rem;
     color: #3377ff;
   }
-  #rightPart p, p{
+  p{
     color: #888;
   }
   @media only screen and (max-width: 800px){ 
     padding: 1rem;
     flex-wrap: wrap;
-    #middle-part, #rightPart{
+    #middle-part, #left-part{
       width: 50%;
     }
-    #rightPart{
+    #left-part{
       margin-bottom: 1.2rem;
     }
     #middle-part{
       margin-bottom: 1.5rem;
+      justify-content: center;
     }
   }
   @media only screen and (max-width: 600px){ 
     display: block;
+    #middle-part{
+      margin-bottom: 1.5rem;
+      justify-content: right;
+    }
   }
 `
 
