@@ -49,17 +49,24 @@ const Footer = styled.footer`
     color: #888;
   }
   @media only screen and (max-width: 800px){ 
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     flex-wrap: wrap;
     #middle-part, #left-part{
       width: 50%;
-    }
+    } 
     #left-part{
       margin-bottom: 1.2rem;
     }
     #middle-part{
       margin-bottom: 1.5rem;
       justify-content: center;
+    }
+    div#languages p{
+      font-size: 1rem;
+    }
+    div#languages div{
+      padding: .05rem .25rem;
+      margin-right: .4rem; 
     }
   }
   @media only screen and (max-width: 600px){ 

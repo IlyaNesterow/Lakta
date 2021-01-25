@@ -2,16 +2,16 @@
 const content = {
   languages: [
     {
+      abbr: 'lv',
+      content: '🇱🇻'
+    },
+    {
       abbr: 'en',
       content: '🇬🇧'
     },
     {
       abbr: 'ru',
       content: '🇷🇺'
-    },
-    {
-      abbr: 'lv',
-      content: '🇱🇻'
     }
   ],
   rightPart: {
