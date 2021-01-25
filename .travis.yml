@@ -1,11 +1,11 @@
 services:
   - docker
 
-#before_install:
-  #- docker build -t ilyanesterow/test -f Dockerfile.dev .
+before_install:
+  - docker build -t ilyanesterow/test -f Dockerfile.dev .
 
-#script:
-  #- docker run -e CI=true ilyanesterow/test npm run test
+script:
+  - docker run -e CI=true ilyanesterow/test npm run test  -- --coverage
 
 deploy:
   provider: heroku
