@@ -2,9 +2,6 @@ import styled from 'styled-components'
 
 
 const Footer = styled.footer`
-  margin-top: 4rem;
-  position: absolute;
-  bottom: 0;
   width: 100%;
   height: auto; 
   padding: 1rem 3rem;
@@ -12,10 +9,10 @@ const Footer = styled.footer`
   justify-content: space-between;
   font-family: Ubuntu, sans-serif;
   background-color: ${ props => props.darkTheme ? '#232323' : '#f9f9ff' };
-  box-shadow: 0 0 .1rem ${ props => props.darkTheme ? '#eee' : '#222' };
+  /*box-shadow: 0 0 .1rem ${ props => props.darkTheme ? '#eee' : '#222' };*/
   div#languages{
     display: flex;
-    align-items: center;
+    align-items: center; 
     font-size: 1.6rem;
     margin-top: .5rem;
   }

@@ -6,6 +6,7 @@ import Footer from '../components/global/footer'
 import MenuTab from '../components/global/menu/MenuTab'
 //pages
 import InfoPage from '../components/infoPage'
+import AboutPage from '../components/aboutPage'
 
 
 const Router = () => (
@@ -14,7 +15,7 @@ const Router = () => (
     <MenuTab/>
     <Switch>
       <Route exact path="/"/>
-      <Route path="/about"/>
+      <Route path="/about" component={ AboutPage }/>
       <Route path="/gallery"/>
       <Route path="/info" component={ InfoPage }/>
     </Switch>

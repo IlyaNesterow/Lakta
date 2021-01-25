@@ -20,6 +20,19 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
+  h1{
+    color: ${ props => props.darkTheme ? '#eee' : '#222' };
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  div#page-section{
+    min-height: calc(100vh - 11.4rem);
+    padding: 2rem 10%;
+    padding-bottom: 4rem;
+  }
+
   div#nav-link-area-tab {
     background-color: ${ props => props.darkTheme ? 'rgba(44, 44, 44, 0.1)' : 'rgba(230, 230, 250, 0.1)' };
     backdrop-filter: blur(7px);
@@ -61,7 +74,6 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${ props => props.darkTheme ? 'rgba(0,0,0,0.2)' : 'rgba(255,255,255,0.3)' };
     /*box-shadow: ${ props => props.darkTheme ? '0 0 1rem #333 inset' : '0 0 1rem #888 inset' };*/
   }
-  
   @media only screen and (min-width: 800px){
     div#nav-link-area-tab{
       display: none;
@@ -72,6 +84,16 @@ const GlobalStyle = createGlobalStyle`
     #nav-link-tab{
       width: 100vw !important;
       padding: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 500px){ 
+    div#page-section{
+      padding: 1.6rem 5%;
+    }
+    h1{
+      font-size: 1.5rem;
+      margin-bottom: .8rem;
     }
   }
 `
