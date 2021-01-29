@@ -1,5 +1,5 @@
 #dockerfile for production
-FROM node:14.15.4-alpine3.10 as builder
+FROM node:alpine as builder
 WORKDIR /app
 
 COPY ./package.json ./
