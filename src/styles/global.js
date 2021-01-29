@@ -190,6 +190,9 @@ const GlobalStyle = createGlobalStyle`
       font-size: 1.5rem;
       margin-bottom: .8rem;
     }
+    .current-image{
+      max-width: 100vw;
+    }
   }
   @media only screen and (max-height: 500px){
     #zoom-bar{

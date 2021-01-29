@@ -14,19 +14,19 @@ const Modal = ({ images, index, onClose }) => {
   const [ zoom, setZoom ] = useState(1)
   const [ unableToZoomIn, setUnableToZoomIn ] = useState(false)
   const [ unableToZoomOut, setUnableToZoomOut ] = useState(true)
-  const [ initialWidth ] = useState(200)
-  //const [ initialHeight, setInitialHeight ] = useState(0) 
-  const [ zoomStep ] = useState(0.2)
+  const [ initialWidth ] = useState((window.innerHeight / window.innerWidth) > 1 ? 300 : 240)
+  const [ zoomStep ] = useState(0.4)
+  const [ treshold, setTreshold ] = useState(window.innerWidth > 600 ? 0.8 : 0.9)
   
   const pic = useRef(null)
+
+  useEffect(() => {
+    document.addEventListener('resize', resetTreshold)
+    return () => document.removeEventListener('resize', resetTreshold)
+  })
   
   useEffect(() => {
-    //const width_before = pic.current.width
-    //const height_before = pic.current.height
-    
     pic.current.width = initialWidth 
-    //pic.current.height = (height_before * initialWidth) / width_before
-    //setInitialHeight(pic.current.height)
     
     setHasPrev(current > 0) 
     setHasNext(current < images.length - 1)
@@ -35,14 +35,17 @@ const Modal = ({ images, index, onClose }) => {
   useEffect(() => { 
     if(zoom >= (1 - zoomStep) && !unableToZoomIn){
       pic.current.width = initialWidth * zoom
-      //pic.current.height = initialHeight * zoom
-
       if(
-        //initialHeight * zoom > window.innerHeight * 0.8 - 10 || 
-        initialWidth * zoom > window.innerWidth * 0.8 - 10
+        pic.current.clientHeight > window.innerHeight * treshold || 
+        pic.current.clientWidth > window.innerWidth * treshold
       ) setUnableToZoomIn(true)
     } 
-  }, [ zoom, zoomStep, initialWidth, /*initialHeight,*/ unableToZoomIn, unableToZoomOut ])
+  }, [ zoom, zoomStep, treshold, initialWidth, unableToZoomIn, unableToZoomOut ])
+
+  const resetTreshold = () => 
+    window.innerWidth > 600
+      ? setTreshold(0.8)
+      : setTreshold(0.9)
 
   const handleImgChange = (dir) => {
     if(dir === 'prev'){ 
@@ -84,10 +87,10 @@ const Modal = ({ images, index, onClose }) => {
 
   const handleZoomIn = () => { 
     if(!unableToZoomIn)
-      if(unableToZoomOut){
-        setUnableToZoomOut(false)
-        setZoom(zoom + zoomStep)
-      } else setZoom(zoom + zoomStep)
+    if(unableToZoomOut){
+      setUnableToZoomOut(false)
+      setZoom(zoom + zoomStep)
+    } else setZoom(zoom + zoomStep)
   }
 
   const handleZoomOut = () => {
