@@ -4,8 +4,16 @@ import styled from 'styled-components'
 const Page = styled.div`
   margin-top: 4rem;
   h1{
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
   }
+  h3{
+    color: ${ props => props.darkTheme ? '#eee' : '#333' };
+    font-size: 1.5rem;
+    margin: 1rem 0; 
+    padding-bottom: .2rem; 
+    padding-left: 1rem;
+    border-bottom: solid 1px #888; 
+  } 
   #images{
     display: flex;
     flex-wrap: wrap;
@@ -61,6 +69,10 @@ const Page = styled.div`
       margin: .5rem; 
       width: calc(50vw - 1rem);
     }
+    h3{
+      margin: 1rem 5%;
+      padding-left: 0;
+    }
   }
   @media only screen and (max-width: 1000px){
     #scroller{
@@ -68,9 +80,9 @@ const Page = styled.div`
     }
   }
   @media only screen and (max-width: 600px){
-    margin-top: 2rem;
+    margin-top: 2.6rem;
     h1{
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.9rem;
     }
     #images{
       display: block;

@@ -28,7 +28,32 @@ const content = {
     en: 'Open source',
     lv: 'Avots',
     ru: 'Источник'
-  }
+  },
+  repo: {
+    en: 'Repository',
+    lv: 'Krājums',
+    ru: 'Хранилище'
+  },
+  connections: {
+    en: 'We are here:',
+    lv: 'Mēs esam šeit:',
+    ru: 'Мы есть тут:'
+  },
+  apps: {
+    whatsapp: {
+      url: 'https://wa.me/37129459776',
+      icon: 'whatsapp'
+    },
+    instagram: {
+      url: 'https://www.instagram.com',
+      icon: 'instagram'
+    },
+    pinterest: {
+      url: 'https://www.pinterest.com/',
+      icon: 'pinterest'
+    }
+  },
+  copyright: 'Copyright © 2021 SIA "Lakta"'
 }
 
 export default content

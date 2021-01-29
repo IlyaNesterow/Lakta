@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const Images = ({ pics, imgOnClick }) => {
+const Images = ({ pics, imgOnClick, startingPoint = 0 }) => {
   const images = pics.map((img, i) => {
     const subtractFive = (num) => 
       num > 4
@@ -14,18 +14,19 @@ const Images = ({ pics, imgOnClick }) => {
       src: img,
       key: img + i,
       onClick: () => {
-        imgOnClick(i)
-      },
-      alt: 'Gallery item'
+        imgOnClick(i + startingPoint)
+      }
     }
 
     return index > 2 
       ? <img 
           { ...props }
+          alt="Gallery item"
           className={`two-images ${ index === 3 ? 'right-most-image' : 'left-most-image' }`}
         />
       : <img
           { ...props }
+          alt="Gallery item"
           className="three-images"
         />
   })

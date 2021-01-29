@@ -5,6 +5,8 @@ import FOOTER from '../../../styles/footer'
 import Languages from './RighPart'
 import MiddlePart from './MiddleElement'
 import RightPart from './LeftPart'
+import Networks from './SocialNetworks'
+import Copyright from './Copyright'
 
 
 const Footer = () => {
@@ -12,9 +14,13 @@ const Footer = () => {
 
   return(
     <FOOTER darkTheme={ theme }>
-      <RightPart/>
-      <MiddlePart/>
-      <Languages/>
+      <div id="upper-pannel">  
+        <RightPart/>
+        <Networks/> 
+        <MiddlePart/>
+        <Languages/>
+      </div> 
+      <Copyright/>
     </FOOTER>
   )
 }

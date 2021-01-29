@@ -187,7 +187,7 @@ const GlobalStyle = createGlobalStyle`
 
   @media only screen and (max-width: 500px){ 
     h1{
-      font-size: 1.5rem;
+      font-size: 1.7rem;
       margin-bottom: .8rem;
     }
     .current-image{

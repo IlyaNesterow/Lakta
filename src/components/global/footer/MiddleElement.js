@@ -10,16 +10,19 @@ const MiddlePart = () => {
 
   return(
     <div id="middle-part">
-      <a 
-        href="https://github.com/IlyaNesterow/Lakta"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <FontAwesomeIcon
-          icon={ faGithub }
-        />
-        { content.source[ lang ] }
-      </a>
+      <p>{ content.repo[ lang ] }</p> 
+      <div id="repository">
+        <a 
+          href="https://github.com/IlyaNesterow/Lakta"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FontAwesomeIcon
+            icon={ faGithub }
+          />
+          { content.source[ lang ] }
+        </a>
+      </div> 
     </div>
   )
 }
