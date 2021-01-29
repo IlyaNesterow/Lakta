@@ -11,6 +11,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: Ubuntu, sans-serif;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
   }
 
   body {
@@ -29,14 +34,6 @@ const GlobalStyle = createGlobalStyle`
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 1.2rem;
-  }
-
-  img{ 
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
   }
 
   div#page-section{

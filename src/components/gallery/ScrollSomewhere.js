@@ -26,24 +26,28 @@ const Scroller = () => {
 
   const scrollSomewhere = () => {
     setSyntheticScrilling(true)
-    directionUp 
-      ? window.scroll({
-          top: 0,
-          left: 0,
-          behavior: 'smooth'
-        })
-      : window.scroll({
-          top: document.body.scrollHeight - window.innerHeight,
-          left: 0,
-          behavior: 'smooth',
-        })
+    if(directionUp){
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      })
+      setDirectionUp(false)
+    } else {
+      window.scroll({
+        top: document.body.scrollHeight - window.innerHeight,
+        left: 0,
+        behavior: 'smooth',
+      })
+      setDirectionUp(true)
+    }
     setTimeout(() => setSyntheticScrilling(false), 500)
   }
   
   return(
     <div 
       id="scroller"
-      className={ visible ? 'vissible' : 'hidden' }
+      className={ visible ? 'visible' : 'hidden' }
       onClick={() => scrollSomewhere()}
     >
       <FontAwesomeIcon

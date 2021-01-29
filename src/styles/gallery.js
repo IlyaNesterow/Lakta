@@ -57,8 +57,8 @@ const Page = styled.div`
     align-items: center;
     box-shadow: 0 0 .2rem ${ props => props.darkTheme ? '#eee' : '#333' };
   }
-  .vissible{
-    bottom: 12vh;
+  .visible{
+    bottom: 2rem;
   }
   .hidden{
     bottom: -5rem;
