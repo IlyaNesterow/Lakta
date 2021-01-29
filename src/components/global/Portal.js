@@ -8,7 +8,7 @@ const Portal = (props) => {
   
   useEffect(() => {
     parent.appendChild(element)
-    document.body.style.overflowY = 'hidden'
+    document.body.style.overflowY = 'none'
     return () => {
       parent.removeChild(element)
       document.body.style.overflowY = 'auto'
