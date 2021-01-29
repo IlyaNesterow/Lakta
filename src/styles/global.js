@@ -2,6 +2,10 @@ import { createGlobalStyle }  from 'styled-components'
 
 
 const GlobalStyle = createGlobalStyle`
+  ::-webkit-scrollbar { 
+    display: none; 
+  }
+  
   * {
     margin: 0;
     padding: 0;
