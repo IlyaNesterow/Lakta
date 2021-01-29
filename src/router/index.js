@@ -7,6 +7,8 @@ import MenuTab from '../components/global/menu/MenuTab'
 //pages
 import InfoPage from '../components/infoPage'
 import AboutPage from '../components/aboutPage'
+import Gallery from '../components/gallery'
+import MainPage from '../components/mainPage'
 
 
 const Router = () => (
@@ -14,10 +16,11 @@ const Router = () => (
     <Navbar/>
     <MenuTab/>
     <Switch>
-      <Route exact path="/"/>
+      <Route exact path="/" component={ MainPage }/>
       <Route path="/about" component={ AboutPage }/>
-      <Route path="/gallery"/>
+      <Route path="/gallery" component={ Gallery }/>
       <Route path="/info" component={ InfoPage }/>
+      <Route path="*" />
     </Switch>
     <Footer/>
   </BrowserRouter>

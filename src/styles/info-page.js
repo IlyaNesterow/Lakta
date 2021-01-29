@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 
 const Page = styled.div`
+  padding: 2rem 10%;
   background-image: url(${ props => props.imageUrl });
   background-color: ${ props => props.darkTheme ? 'rgba(0,0,0,0.95)' : 'rgba(255,255,255,0.95)' };
   background-blend-mode: overlay;
@@ -72,6 +73,7 @@ const Page = styled.div`
   }
   @media only screen and (max-width: 500px){
     background-color: ${ props => props.darkTheme ? 'rgba(0,0,0,0.6)' : 'rgba(255,255,255,0.6)' };
+    padding: 1.6rem 5%;
   }
 `
 

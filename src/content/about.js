@@ -83,7 +83,7 @@ const content = {
       ru: 'крышы'
     },
     {
-      en: 'sun clock',
+      en: 'sun clocks',
       lv: 'saulespulksteņi',
       ru: 'солнечные часы'
     },
@@ -103,12 +103,12 @@ const content = {
       ru: 'якоря'
     },
     {
-      en: 'doorhandle',
+      en: 'doorhandles',
       lv: 'rokturi',
       ru: 'дверные ручки'
     },
     {
-      en: 'hanger',
+      en: 'hangers',
       lv: 'pakaramie',
       ru: 'вешалки'
     },

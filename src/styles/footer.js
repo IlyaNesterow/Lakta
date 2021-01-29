@@ -9,7 +9,7 @@ const Footer = styled.footer`
   justify-content: space-between;
   font-family: Ubuntu, sans-serif;
   background-color: ${ props => props.darkTheme ? '#232323' : '#f9f9ff' };
-  /*box-shadow: 0 0 .1rem ${ props => props.darkTheme ? '#eee' : '#222' };*/
+  box-shadow: 0 0 .1rem ${ props => props.darkTheme ? '#eee' : '#222' };
   div#languages{
     display: flex;
     align-items: center; 

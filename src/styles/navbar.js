@@ -5,8 +5,8 @@ const NAV = styled.nav`
   padding: 1rem;
   position: sticky !important;
   transition: background-color box-shadow 0.2s;
-  background-color: transparent/*${ props => props.darkTheme ? '#232323' : '#fff' }*/;
-  /*box-shadow: 0 0 .15rem ${ props => props.darkTheme ? '#fff' : '#333' };*/
+  background-color: ${ props => props.darkTheme ? '#232323' : '#fff' };
+  box-shadow: 0 0 .15rem ${ props => props.darkTheme ? '#fff' : '#333' };
   display: flex;
   justify-content: space-between;
   z-index: 2;
@@ -70,7 +70,7 @@ const NAV = styled.nav`
     height: 1.44rem;
     width: 1.44rem;
     left: .15rem;
-    bottom: .15rem;
+    bottom: .18rem;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
