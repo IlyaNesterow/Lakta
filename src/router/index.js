@@ -9,6 +9,7 @@ import InfoPage from '../components/infoPage'
 import AboutPage from '../components/aboutPage'
 import Gallery from '../components/gallery'
 import MainPage from '../components/mainPage'
+import PageNotFound from '../components/global/PageNotFound'
 
 
 const Router = () => (
@@ -20,7 +21,7 @@ const Router = () => (
       <Route path="/about" component={ AboutPage }/>
       <Route path="/gallery" component={ Gallery }/>
       <Route path="/info" component={ InfoPage }/>
-      <Route path="*" />
+      <Route path="*" component={ PageNotFound }/>
     </Switch>
     <Footer/>
   </BrowserRouter>

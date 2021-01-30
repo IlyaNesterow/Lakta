@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from '../Logo'
 import { useSelector } from 'react-redux'
-import content from '../../../content/footer'
+import { ContentContext } from '../../../utils/contexts'
 
 
 const LaktaPart = () => {
@@ -15,7 +15,11 @@ const LaktaPart = () => {
         height="65pt"
         width="66pt"
       />
-      <p>{ content.rightPart[lang] }</p>
+      <ContentContext.Consumer>
+        {content =>  
+          <p>{ content.footer.rightPart[lang] }</p>
+        }
+      </ContentContext.Consumer>
     </div>
   )
 }

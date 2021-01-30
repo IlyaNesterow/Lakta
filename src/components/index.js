@@ -7,14 +7,25 @@ import GlobalStyle from '../styles/global'
 import { setDefault } from '../redux/actions/theme'
 import setOpened from '../redux/actions/menu'
 import change from '../redux/actions/lang'
+import { ContentContext } from '../utils/contexts'
+import InitialScene from './global/InitialScene'
 
 
 const App = () => {
   const [ langs ] = useState(['en', 'lv', 'ru'])
+  const [ content, setContent ] = useState(null)
 
   const theme = useSelector(state => state.theme)
   
   const dispatch = useDispatch()
+
+  useEffect(() => {
+    fetch('https://temporary-lakta-storage.s3-us-west-2.amazonaws.com/data-1.json')
+      .then(res => res.json())
+      .then(res => {
+        setTimeout(() => setContent(res), 1000)
+      })
+  }, [])
 
   useEffect(() => {
     const checkLang = async () => {
@@ -51,7 +62,14 @@ const App = () => {
   return (
     <>
       <GlobalStyle darkTheme={ theme }/>
-      <Router/>
+      { content === null
+        ? <InitialScene/>
+        : (
+            <ContentContext.Provider value={ content }>
+              <Router/>
+            </ContentContext.Provider>
+          )
+      }
     </>
   )
 }

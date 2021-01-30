@@ -5,7 +5,7 @@ import Page from '../../styles/gallery'
 import Scroller from './ScrollSomewhere'
 import Modal from '../modal'
 import ImageGroup from './Images'
-import content from '../../content/gallery'
+import { ContentContext } from '../../utils/contexts'
 
 
 const Main = () => {
@@ -57,21 +57,25 @@ const Main = () => {
   } 
 
   return(
-    <Page
-      darkTheme={ theme }
-      id="page-section"
-    >
-      <h1>{ content.title[ lang ] }</h1>
-      { generateContent(content) }
-      <Scroller/>
-      {modalOpened && currentImgInModal !== null &&
-        <Modal
-          images={ getAllImages(content.pictures) }
-          index={ currentImgInModal }
-          onClose={ closeModal }
-        />
+    <ContentContext.Consumer>
+      {content => 
+        <Page
+          darkTheme={ theme }
+          id="page-section"
+        >
+          <h1>{ content.gallery.title[ lang ] }</h1>
+          { generateContent(content.gallery) }
+          <Scroller/>
+          {modalOpened && currentImgInModal !== null &&
+            <Modal
+              images={ getAllImages(content.gallery.pictures) }
+              index={ currentImgInModal }
+              onClose={ closeModal }
+            />
+          }
+        </Page>
       }
-    </Page>
+    </ContentContext.Consumer>
   )
 }
 

@@ -41,6 +41,14 @@ const GlobalStyle = createGlobalStyle`
     padding-bottom: 4rem;
   }
 
+  div#initial-scene{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   div#nav-link-area-tab {
     background-color: ${ props => props.darkTheme ? 'rgba(44, 44, 44, 0.1)' : 'rgba(230, 230, 250, 0.1)' };
     backdrop-filter: blur(7px);

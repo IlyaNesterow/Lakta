@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import content from '../../../content/footer'
+import { ContentContext } from '../../../utils/contexts'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
@@ -10,19 +10,25 @@ const MiddlePart = () => {
 
   return(
     <div id="middle-part">
-      <p>{ content.repo[ lang ] }</p> 
-      <div id="repository">
-        <a 
-          href="https://github.com/IlyaNesterow/Lakta"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FontAwesomeIcon
-            icon={ faGithub }
-          />
-          { content.source[ lang ] }
-        </a>
-      </div> 
+      <ContentContext.Consumer>
+        {content => 
+          <>
+            <p>{ content.footer.repo[ lang ] }</p> 
+            <div id="repository">
+              <a 
+                href="https://github.com/IlyaNesterow/Lakta"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon
+                  icon={ faGithub }
+                />
+                { content.footer.source[ lang ] }
+              </a>
+            </div> 
+          </>
+        }
+      </ContentContext.Consumer>
     </div>
   )
 }
