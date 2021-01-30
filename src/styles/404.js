@@ -8,6 +8,16 @@ const Page = styled.div`
     font-size: 1.4rem;
     color: ${ props => props.darkTheme ? '#eee' : '#333' };
   }
+  @media only screen and (max-width: 500px){ 
+    p{
+      font-size: 1.3rem;
+    }
+  }
+  @media only screen and (max-width: 300px){ 
+    p{
+      font-size: 1.1rem;
+    }
+  }
 `
 
 export default Page

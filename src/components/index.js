@@ -32,6 +32,7 @@ const App = () => {
       let lang = window.localStorage.getItem('lang')
       if(lang && !langs.some(l => l === lang.toLowerCase())) lang = 'lv'
       if(!lang) lang = await defineRegion()
+      console.log(lang)
       dispatch(change(lang))
     }
     checkLang()
