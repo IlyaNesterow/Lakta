@@ -105,6 +105,7 @@ const Footer = styled.footer`
     div#languages div{
       padding: .05rem .25rem;
       margin-right: .4rem; 
+      margin-bottom: .75rem;
     }
   }
   @media only screen and (max-width: 600px){ 

@@ -8,7 +8,7 @@ const defineRegion = async () => {
     if(countryCode === 'lv') return countryCode
     else return 'en'
   }
-  return null
+  return 'lv'
 }
 
 export default defineRegion
