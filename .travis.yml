@@ -8,12 +8,15 @@ script:
   - docker run -e CI=true ilyanesterow/test npm run test  -- --coverage
 
 deploy:
-  provider: elasticbeanstalk
-  access_key_id: $AWS_ACCESS_ID
-  secret_access_key: $AWS_SECRET_KEY
-  region: "us-west-2"
-  app: "lakta"
-  env: "Lakta-env-1"
-  bucket_name: "elasticbeanstalk-us-west-2-284065031581"
-  on: 
-    branch: main 
+  provider: heroku
+  api_key: $HEROKU_API_KEY
+  app: $HEROKU_APP_NAME
+  #provider: elasticbeanstalk
+  #access_key_id: $AWS_ACCESS_ID
+  #secret_access_key: $AWS_SECRET_KEY
+  #region: "us-west-2"
+  #app: "lakta"
+  #env: "Lakta-env-1"
+  #bucket_name: "elasticbeanstalk-us-west-2-284065031581"
+  #on: 
+    #branch: main 
