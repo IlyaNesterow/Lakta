@@ -46,6 +46,8 @@ const App = () => {
     }
   })
 
+  console.log(process.env.GEOLOCATION_API_KEY)
+
   const closeMenu = () => {
     if(window.innerWidth > 800) dispatch(setOpened(false))
   }
