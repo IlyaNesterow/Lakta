@@ -45,6 +45,9 @@ const Footer = styled.footer`
   #pinterest{
     color: #ff3333;
   }
+  #facebook{
+    color: #3377ff;
+  }
   #networks-icons a{   
     font-size: 2rem;
     padding: .5rem;
@@ -98,6 +101,9 @@ const Footer = styled.footer`
     #middle-part{
       margin-bottom: 1.5rem;
       justify-content: center;
+    }
+    #languages{
+      margin-right: 2.9rem;
     }
     div#languages p{
       font-size: 1rem;

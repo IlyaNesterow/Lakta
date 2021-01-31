@@ -21,7 +21,7 @@ const Main = () => {
         <Page 
           id="page-section"
           darkTheme={ theme }
-          imageUrl="https://upload.wikimedia.org/wikipedia/commons/1/1e/San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg"
+          imageUrl={ content.info.bgImage }
         >
           <h1>{ content.info.title[ lang ] }</h1>
           <SubTitle

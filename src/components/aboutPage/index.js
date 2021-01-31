@@ -25,9 +25,9 @@ const Main = () => {
         <Page 
           id="page-section"
           darkTheme={ theme }
-          image1="http://lakta.lv/images/lakta-metala-kaluma-margas-4-small.jpg"
-          image2="http://lakta.lv/images/lakta-dekorativs-metala-kaluma-objekts-small.jpg"
-          image3="http://lakta.lv/images/lakta-metala-kaluma-varti-4-small.jpg"
+          image1={ content.about.bgImages[0] }
+          image2={ content.about.bgImages[1] }
+          image3={ content.about.bgImages[2] }
         >
           <h1>{ content.about.title[ lang ] }</h1>
           <div id="introduction">

@@ -3,7 +3,10 @@ import styled from 'styled-components'
 
 const NAV = styled.nav`
   padding: 1rem;
-  position: sticky !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
   transition: background-color box-shadow 0.2s;
   background-color: ${ props => props.darkTheme ? '#232323' : '#fff' };
   box-shadow: 0 0 .15rem ${ props => props.darkTheme ? '#fff' : '#333' };

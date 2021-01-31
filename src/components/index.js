@@ -14,13 +14,14 @@ import InitialScene from './global/InitialScene'
 const App = () => {
   const [ langs ] = useState(['en', 'lv', 'ru'])
   const [ content, setContent ] = useState(null)
+  const [ secrets, setSecrets ] = useState(null)
 
   const theme = useSelector(state => state.theme)
   
   const dispatch = useDispatch()
 
   useEffect(() => {
-    fetch('https://temporary-lakta-storage.s3-us-west-2.amazonaws.com/data-1.json')
+    fetch('https://temporary-lakta-storage.s3-us-west-2.amazonaws.com/data.json')
       .then(res => res.json())
       .then(res => {
         setTimeout(() => setContent(res), 1000)
@@ -28,25 +29,36 @@ const App = () => {
   }, [])
 
   useEffect(() => {
+    fetch('https://temporary-lakta-storage.s3-us-west-2.amazonaws.com/secrets.json')
+      .then(res => {
+        if(res.ok) return res.json()
+        throw new Error('Nothing received')
+      })
+      .then(res => setSecrets(res))
+      .catch(() => setSecrets(null))
+  }, [])
+
+  useEffect(() => {
     const checkLang = async () => {
       let lang = window.localStorage.getItem('lang')
       if(lang && !langs.some(l => l === lang.toLowerCase())) lang = 'lv'
-      if(!lang) lang = await defineRegion()
+      if(!lang){
+        if(secrets) lang = await defineRegion(secrets.GEOLOCATION_API_KEY)
+        else lang = 'lv'
+      }
       dispatch(change(lang))
     }
     checkLang()
-  }, [ dispatch, langs ]) 
+  }, [ dispatch, langs, secrets ]) 
 
   useEffect(_ => {
     window.addEventListener('storage', storageObserver)
     window.addEventListener('resize', closeMenu)
-    return _ => {
+    return () => {
       window.removeEventListener('storage', storageObserver)
       window.removeEventListener('resize', closeMenu)
     }
   })
-
-  console.log(process.env.GEOLOCATION_API_KEY)
 
   const closeMenu = () => {
     if(window.innerWidth > 800) dispatch(setOpened(false))
@@ -63,7 +75,13 @@ const App = () => {
 
   return (
     <>
-      <GlobalStyle darkTheme={ theme }/>
+      <GlobalStyle 
+        darkTheme={ theme }
+        image1={ content ? content.images.menu.first : '' }
+        image2={ content ? content.images.menu.second : '' }
+        image3={ content ? content.images.menu.third : '' }
+        image4={ content ? content.images.menu.fourth : '' }
+      />
       { content === null
         ? <InitialScene/>
         : (

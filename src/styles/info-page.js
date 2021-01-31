@@ -8,6 +8,10 @@ const Page = styled.div`
   background-blend-mode: overlay;
   background-size: cover;
   transition: background-color .5s;
+  
+  h1{
+    margin-top: 2rem;
+  }
 
   :hover{
     background-color: ${ props => props.darkTheme ? 'rgba(0,0,0,0.6)' : 'rgba(255,255,255,0.6)' };

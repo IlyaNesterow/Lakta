@@ -37,9 +37,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   div#page-section{
-    min-height: calc(100vh - 11.4rem);
+    padding-top: 4rem;
+    min-height: calc(100vh - 7.4rem);
     padding-bottom: 4rem;
-  }
+  } 
 
   div#initial-scene{
     width: 100vw;
@@ -49,15 +50,20 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
   }
 
+  #menu-container{
+    position: fixed;
+    backdrop-filter: blur(7px);
+    top: 3.8rem;
+    height: calc(100vh - 3.8rem);
+    width: 100vw;
+  }
+ 
   div#nav-link-area-tab {
     background-color: ${ props => props.darkTheme ? 'rgba(44, 44, 44, 0.1)' : 'rgba(230, 230, 250, 0.1)' };
-    backdrop-filter: blur(7px);
-    position: fixed;
-    top: 3.8rem;
-    width: 100vw;
-    height: calc(100vh - 3.8rem);
     display: flex;
     flex-wrap: wrap;
+    height: 100% !important;
+    width: 100% !important;
   }
 
   div#pic-modal{
@@ -137,7 +143,6 @@ const GlobalStyle = createGlobalStyle`
     position: relative; 
     align-items: center;
     justify-content: center;
-    background-image: url('https://lakta.s3.eu-north-1.amazonaws.com/balkoni/DSC00119.JPG');
     background-color: ${ props => props.darkTheme ? 'rgba(0,0,0,0.8)' : 'rgba(255,255,255,0.8)' };
     background-blend-mode: overlay;
     background-size: cover;
@@ -146,7 +151,19 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #nav-link-tab:nth-child(1){
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/1e/San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg');
+    background-image: url('${ props => props.image1 }');
+  }
+
+  #nav-link-tab:nth-child(2){
+    background-image: url('${ props => props.image2 }');
+  }
+
+  #nav-link-tab:nth-child(3){
+    background-image: url('${ props => props.image3 }');
+  }
+
+  #nav-link-tab:nth-child(4){
+    background-image: url('${ props => props.image4 }');
   }
 
   #nav-link-tab:hover{
@@ -191,6 +208,12 @@ const GlobalStyle = createGlobalStyle`
     #nav-link-tab{
       width: 100vw !important;
       padding: 1rem;
+    }
+    #nav-link-area-tab{
+      max-height: calc(90vh - 3.8rem) !important;
+    }
+    #zoom-bar{
+      bottom: 2.5rem;
     }
   }
 

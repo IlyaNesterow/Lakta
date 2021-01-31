@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { faWhatsapp, faPinterest, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faWhatsapp, faPinterest, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 import { ContentContext } from '../../../utils/contexts'
 import SocialNetwork from './SocialNetwork'
@@ -12,7 +12,8 @@ const Networks = () => {
   const icons = {
     instagram: faInstagram,
     pinterest: faPinterest,
-    whatsapp: faWhatsapp
+    whatsapp: faWhatsapp,
+    facebook: faFacebook
   }
 
   const createIcons = (data) => {

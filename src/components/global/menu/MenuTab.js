@@ -14,11 +14,13 @@ const MenuTab = () => {
     <>
       {opened &&
         <Portal parent="navbar">
-          <Links 
-            id="nav-link-area-tab" 
-            navLinkId="nav-link-tab"
-            onClick={() => dispatch(setOpened(false))}
-          />
+          <div id="menu-container">
+            <Links 
+              id="nav-link-area-tab" 
+              navLinkId="nav-link-tab"
+              onClick={() => dispatch(setOpened(false))}
+            />
+          </div>
         </Portal>
       }
     </>
