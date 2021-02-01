@@ -40,7 +40,7 @@ const Page = styled.div`
     font-size: 1.2rem;
     margin-right: .5rem;
     width: 3rem;
-    color: #997711; 
+    color: #3377ff; 
   }
   #sub-section p{
     font-size: 1.2rem;

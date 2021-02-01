@@ -7,8 +7,8 @@ const NAV = styled.nav`
   top: 0;
   left: 0;
   width: 100vw;
-  transition: background-color box-shadow 0.2s;
-  background-color: ${ props => props.darkTheme ? '#232323' : '#fff' };
+  transition: background-color .2s;
+  background-color: ${ props => props.darkTheme ? '#222' : '#fff' };
   box-shadow: 0 0 .15rem ${ props => props.darkTheme ? '#fff' : '#333' };
   display: flex;
   justify-content: space-between;
@@ -20,7 +20,7 @@ const NAV = styled.nav`
   }
 
   #nav-link{
-    padding: .2rem 2rem;
+    padding: .1rem 2rem;
     font-size: 1.2rem;
     color: ${ props => props.darkTheme ? '#fff' : '#333' };
   }

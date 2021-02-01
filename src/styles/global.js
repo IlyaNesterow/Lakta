@@ -10,8 +10,9 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Ubuntu, sans-serif;
-    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    user-select: none; 
     -moz-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
@@ -30,10 +31,12 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1{
-    color: ${ props => props.darkTheme ? '#eee' : '#222' };
+    color: #eac700;
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
   }
 
   div#page-section{

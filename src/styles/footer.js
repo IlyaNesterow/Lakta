@@ -74,6 +74,8 @@ const Footer = styled.footer`
     text-align: center;
   }
   p{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
     color: #888;
   }
   @media only screen and (max-width: 850px){ 
