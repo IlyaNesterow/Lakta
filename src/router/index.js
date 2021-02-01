@@ -18,7 +18,7 @@ const Router = () => (
     <MenuTab/>
     <Switch>
       <Route exact path="/" component={ MainPage }/>
-      <Route path="/about" component={ AboutPage }/>
+      <Route path="/about/intro" component={ AboutPage }/>
       <Route path="/gallery" component={ Gallery }/>
       <Route path="/info" component={ InfoPage }/>
       <Route path="*" component={ PageNotFound }/>

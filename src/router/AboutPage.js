@@ -35,9 +35,9 @@ const Router = (props) => {
             /> 
           }
         />
-        <Route    
+        <Route     
           exact
-          path={ `${ path }` } 
+          path={ `${ path }/intro` } 
           render={() => 
             <Introduction 
               lang={ lang }
