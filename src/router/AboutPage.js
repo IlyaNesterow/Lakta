@@ -36,6 +36,7 @@ const Router = (props) => {
           }
         />
         <Route    
+          exact
           path={ `${ path }` } 
           render={() => 
             <Introduction 
