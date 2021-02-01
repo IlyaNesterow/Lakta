@@ -25,7 +25,6 @@ const App = () => {
       .then(res => res.json())
       .then(res => {
         setTimeout(() => setContent(res), 1000)
-        console.log(res)
       })
       .catch(err => console.log(err.message))
   }, [])

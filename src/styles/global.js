@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     transition: background-color .2s;
-    background-color: ${ props => props.darkTheme ? '#333' : '#fefefe' };
+    background-color: ${ props => props.darkTheme ? '#111' : '#fefefe' };
     position: relative;
     min-height: 100vh;
   }
@@ -68,7 +68,19 @@ const GlobalStyle = createGlobalStyle`
     height: 100% !important;
     width: 100% !important;
   }
-
+  #sub-navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-left: 20%; 
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  #sub-navbar a{
+    font-family: Ubuntu, sans-serif;
+    font-size: 1rem;
+    color: ${ props => props.darkTheme ? '#eee' : '#222' };
+  } 
   div#pic-modal{
     position: fixed;
     top: 0;
@@ -190,7 +202,7 @@ const GlobalStyle = createGlobalStyle`
   .disabled{
     color: #888;
   }
-  @media only screen and (max-width: 900px){
+  @media only screen and (max-width: 850px){
     #left-arrow, #right-arrow{
       display: none;
     }
@@ -200,13 +212,16 @@ const GlobalStyle = createGlobalStyle`
     .modal-control{
       font-size: 1.4rem;
     }
+    #sub-navbar{
+      width: 90%;
+      margin-left: 5%; 
+    }
   } 
-  @media only screen and (min-width: 800px){
+  @media only screen and (min-width: 850px){
     div#nav-link-area-tab{
       display: none;
     }
   }
-
   @media only screen and (max-width: 600px){ 
     #nav-link-tab{
       width: 100vw !important;
@@ -219,7 +234,6 @@ const GlobalStyle = createGlobalStyle`
       bottom: 2.5rem;
     }
   }
-
   @media only screen and (max-width: 500px){ 
     h1{
       font-size: 1.7rem;

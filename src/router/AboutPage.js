@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route, useRouteMatch } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import Products from '../components/aboutPage/Products'
 import AboutProducts from '../components/aboutPage/AboutProducts'
@@ -9,7 +9,6 @@ import PageNotFound from '../components/global/PageNotFound'
 
 const Router = (props) => {
   const { lang, theme, children } = props
-  const { path } = useRouteMatch()
 
   return(
     <BrowserRouter>
@@ -17,7 +16,7 @@ const Router = (props) => {
       <Switch>
         <Route 
           exact
-          path={ `${ path }/onproducts` } 
+          path="/about/onproducts"
           render={() => 
             <AboutProducts 
               lang={ lang }
@@ -27,7 +26,7 @@ const Router = (props) => {
         />
         <Route 
           exact
-          path={ `${ path }/products` } 
+          path="/about/products"
           render={() => 
             <Products 
               lang={ lang }
@@ -35,9 +34,8 @@ const Router = (props) => {
             /> 
           }
         />
-        <Route     
-          exact
-          path={ `${ path }/intro` } 
+        <Route   
+          path="/about/intro"
           render={() => 
             <Introduction 
               lang={ lang }

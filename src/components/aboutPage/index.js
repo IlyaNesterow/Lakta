@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 
 import Page from '../../styles/aboutPage'
 import Router from '../../router/AboutPage'
-import SubNavbar from './SubNavbar'
+import SubNavbar from '../global/SubNavbar'
 import { ContentContext } from '../../utils/contexts'
 
 
@@ -23,7 +23,11 @@ const Main = () => {
             lang={ lang }
             theme={ theme }
           >
-            <SubNavbar lang={ lang }/>
+            <SubNavbar 
+              lang={ lang }
+              content={ content.about.subnavbar.links }
+              path="about"
+            />
           </Router>
         </Page>
       }
