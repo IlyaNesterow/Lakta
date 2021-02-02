@@ -42,9 +42,9 @@ const TextBox = ({ labels }) => {
         { labels[ 0 ][ lang ] }
       </h2>
       <h2 ref={ second } id="current">
-        { labels[ 1 ][ lang ] }
+        { labels[ 1 ][ lang ] } 
       </h2>
-      <h2 ref={ third } id="next"></h2>
+      <h2 ref={ third } id="next">{ labels[ 2 ][ lang ] }</h2>
     </div>
   )
 }
