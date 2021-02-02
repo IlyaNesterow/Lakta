@@ -73,6 +73,7 @@ const Page = styled.div`
       width: 90%;
       margin-left: 5%;
       margin-top: 2.5rem;
+      margin-bottom: 2rem;
       font-size: 1.1rem;
     }
   }
