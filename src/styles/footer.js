@@ -9,7 +9,7 @@ const Footer = styled.footer`
     display: flex;
     justify-content: space-between;
     font-family: Ubuntu, sans-serif;
-    background-color: ${ props => props.darkTheme ? '#232323' : '#f9f9ff' };
+    background-color: ${ props => props.darkTheme ? '#111' : '#f9f9ff' };
   }
   box-shadow: 0 0 .1rem ${ props => props.darkTheme ? '#eee' : '#222' };
   div#languages{
@@ -68,7 +68,7 @@ const Footer = styled.footer`
     color: #3377ff;
   }
   #copyright{
-    background-color: ${ props => props.darkTheme ? '#111' : '#eeeeff' };
+    background-color: ${ props => props.darkTheme ? '#12121f' : '#eeeeff' };
     padding: 1rem;
     color: ${ props => props.darkTheme ? '#eee' : '#222' };
     text-align: center;

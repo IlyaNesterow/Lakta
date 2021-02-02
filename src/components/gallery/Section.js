@@ -1,39 +1,22 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-import Modal from '../modal'
-import ImageGroup from './Images'
+import ImageSection from '../global/ImageSection'
+import useModal from '../../hooks/useModal'
 
 
 const Section = ({ data, lang }) => {
-  const [ currentImgInModal, setCurrentImgInModal ] = useState(null)
-  const [ modalOpened, setModalOpened ] = useState(false)
-
-  const imgClickHandler = (index) => {
-    setModalOpened(true)
-    setCurrentImgInModal(index)
-  }
-
-  const closeModal = () => {
-    setModalOpened(false) 
-    setCurrentImgInModal(null)
-  }
+  const [ imgClickHandler, component ] = useModal(data.pictures)
 
   return(
     <>
       <h3>{ data.title[ lang ][0].toUpperCase() + data.title[ lang ].substring(1) }</h3>
-      <ImageGroup
+      <ImageSection
         pics={ data.pictures }
         imgOnClick={ imgClickHandler }
       />
-      {modalOpened && currentImgInModal !== null &&
-        <Modal
-          images={ data.pictures }
-          index={ currentImgInModal }
-          onClose={ closeModal }
-        />
-      }
+      { component }
     </>
   )
-}
+} 
 
 export default Section

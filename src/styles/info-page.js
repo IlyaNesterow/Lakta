@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Page = styled.div`
   padding: 2rem 10%;
   background-image: url(${ props => props.imageUrl });
-  background-color: ${ props => props.darkTheme ? 'rgba(0,0,0,0.95)' : 'rgba(255,255,255,0.95)' };
+  background-color: ${ props => props.darkTheme ? 'rgba(16,16,16,0.99)' : 'rgba(255,255,255,0.95)' };
   background-blend-mode: overlay;
   background-size: cover;
   transition: background-color .5s;

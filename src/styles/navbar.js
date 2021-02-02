@@ -8,8 +8,7 @@ const NAV = styled.nav`
   left: 0;
   width: 100vw;
   transition: background-color .2s;
-  background-color: ${ props => props.darkTheme ? '#222' : '#fff' };
-  box-shadow: 0 0 .15rem ${ props => props.darkTheme ? '#fff' : '#333' };
+  background-color: ${ props => props.darkTheme ? '#111' : '#fff' };
   display: flex;
   justify-content: space-between;
   z-index: 2;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux' 
 import { 
   faMobileAlt, faPhone, faEnvelope, 
@@ -12,6 +12,8 @@ import SubTitle from './SubTitle'
 
 
 const Main = () => {
+  useEffect(() => window.scrollTo(0, 0), [])
+  
   const theme = useSelector(state => state.theme)
   const lang = useSelector(state => state.lang)
 

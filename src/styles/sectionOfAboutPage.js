@@ -17,6 +17,7 @@ const Section = styled.div`
     p{
       font-size: 1.4rem;
       color: ${ props => props.darkTheme ? '#eee' : '#333' };
+      transition: all .5s;
       width: 60%;
     }
     :hover{ 
