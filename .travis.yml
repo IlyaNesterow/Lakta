@@ -21,4 +21,4 @@ deploy:
   #env: "Lakta-env-1"
   #bucket_name: "elasticbeanstalk-us-west-2-284065031581"
   #on: 
-    #branch: main 
+    #branch: main  
