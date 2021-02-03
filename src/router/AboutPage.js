@@ -11,12 +11,12 @@ const Router = (props) => {
   const { lang, theme, children } = props
 
   return(
-    <BrowserRouter>
+    <BrowserRouter basename="/about">
       { children }
       <Switch>
         <Route 
           exact
-          path="/about/onproducts"
+          path="/onproducts"
           render={() => 
             <AboutProducts 
               lang={ lang }
@@ -26,7 +26,7 @@ const Router = (props) => {
         />
         <Route 
           exact
-          path="/about/products"
+          path="/products"
           render={() => 
             <Products 
               lang={ lang }
@@ -35,7 +35,7 @@ const Router = (props) => {
           }
         />
         <Route   
-          path="/about/intro"
+          path="/intro"
           render={() => 
             <Introduction 
               lang={ lang }

@@ -13,11 +13,11 @@ spec:
         app: client
     spec:
       containers:
-      - name: client
-        image: ilyanesterow/lakta-prod
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
-        ports:
-        - containerPort: 80
+        - name: client
+          image: ilyanesterow/lakta-prod
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 80

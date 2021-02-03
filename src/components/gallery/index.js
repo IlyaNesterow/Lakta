@@ -27,7 +27,6 @@ const Main = () => {
             <SubNavbar
               lang={ lang }
               content={ content.gallery.sections }
-              path="gallery"
               ctx="title" 
             />
           </Router>

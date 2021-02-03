@@ -7,6 +7,6 @@ spec:
   selector:
     app: client
   ports:
-  - port: 3050
-    targetPort: 80
-    nodePort: 31515
+    - port: 3050
+      targetPort: 80
+      nodePort: 31515

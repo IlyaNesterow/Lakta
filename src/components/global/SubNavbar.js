@@ -2,11 +2,11 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 
-const SubNavbar = ({ content, lang, path, ctx = 'ctx' }) => {
+const SubNavbar = ({ content, lang, ctx = 'ctx' }) => {
   const generateLinks = (data) => 
     data.map(l => 
       <NavLink
-        to={ `/${ path }/${ l.url }` }
+        to={ `/${ l.url }` }
         key={ l.url }
         activeStyle={{
           color: '#2266ff',
@@ -18,7 +18,7 @@ const SubNavbar = ({ content, lang, path, ctx = 'ctx' }) => {
     )
   
   return(
-    <div id="sub-navbar"> 
+    <div id="sub-navbar">  
       { generateLinks(content) }
     </div>
   )

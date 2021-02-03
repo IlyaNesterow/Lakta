@@ -13,7 +13,7 @@ const Router = (props) => {
     data.map(s => (
       <Route 
         exact
-        path={ `/gallery/${ s.url }` } 
+        path={ `/${ s.url }` } 
         key={ s.title.en.trim() }
         render={() => 
           <Section
@@ -27,7 +27,7 @@ const Router = (props) => {
   return(
     <ContentContext.Consumer>
       {content => 
-        <BrowserRouter>
+        <BrowserRouter basename="/gallery">
           { children }
           <Switch>
             { generateRoutes(content.gallery.sections) }

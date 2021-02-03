@@ -28,7 +28,6 @@ const Main = () => {
             <SubNavbar 
               lang={ lang }
               content={ content.about.subnavbar.links }
-              path="about"
             />
           </Router>
         </Page>
