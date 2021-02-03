@@ -75,13 +75,15 @@ const Modal = ({ images, index, onClose }) => {
     if(
       location.x - touchStart.x > 0 && 
       location.x - touchStart.x > window.innerWidth / 6 &&
-      Math.abs(location.y - touchStart.y) < 50
-    ) handleImgChange('next')
+      Math.abs(location.y - touchStart.y) < 50 &&
+      hasPrev
+    ) handleImgChange('prev')
     else if(
       location.x - touchStart.x < 0 && 
       Math.abs(location.x - touchStart.x) > window.innerWidth / 6 &&
-      Math.abs(location.y - touchStart.y) < 50
-    ) handleImgChange('prev')
+      Math.abs(location.y - touchStart.y) < 50 &&
+      hasNext
+    ) handleImgChange('next')
     setTouchStart(null)
   }
 
