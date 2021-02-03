@@ -72,19 +72,21 @@ const Modal = ({ images, index, onClose }) => {
       x: touch.clientX, 
       y: touch.clientY
     }
-    if(
-      location.x - touchStart.x > 0 && 
-      location.x - touchStart.x > window.innerWidth / 6 &&
-      Math.abs(location.y - touchStart.y) < 50 &&
-      hasPrev
-    ) handleImgChange('prev')
-    else if(
-      location.x - touchStart.x < 0 && 
-      Math.abs(location.x - touchStart.x) > window.innerWidth / 6 &&
-      Math.abs(location.y - touchStart.y) < 50 &&
-      hasNext
-    ) handleImgChange('next')
-    setTouchStart(null)
+    if(touchStart){
+      if(
+        location.x - touchStart.x > 0 && 
+        location.x - touchStart.x > window.innerWidth / 6 &&
+        Math.abs(location.y - touchStart.y) < 50 &&
+        hasPrev
+      ) handleImgChange('prev')
+      else if(
+        location.x - touchStart.x < 0 && 
+        Math.abs(location.x - touchStart.x) > window.innerWidth / 6 &&
+        Math.abs(location.y - touchStart.y) < 50 &&
+        hasNext
+      ) handleImgChange('next')
+      setTouchStart(null)
+    }
   }
 
   const handleZoomIn = () => { 
