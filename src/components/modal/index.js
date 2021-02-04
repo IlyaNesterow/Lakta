@@ -3,21 +3,12 @@ import Modal from './Modal'
 import Portal from '../global/Portal'
 
 
-const Main = (props) => {
-  const keyDownHandler = e => {
-    if(e.keyCode === 27)
-      return props.onClose()
-  }
-
-  return(
-    <Portal parent="modal">
-      <div id="pic-modal"
-        onKeyDown={ keyDownHandler }
-      >
-        <Modal { ...props }/>
-      </div>
-    </Portal>
-  )
-}
+const Main = (props) => (
+  <Portal parent="modal">
+    <div id="pic-modal">
+      <Modal { ...props }/>
+    </div>
+  </Portal>
+)
 
 export default Main
