@@ -5,7 +5,6 @@ const Page = styled.div`
   .container{
     width: 100vw;
     height: calc(100vh - 4rem);
-    transition: all .6s;
     position: relative;
     display: flex;
     align-items: center;

@@ -21,39 +21,13 @@ const Modal = ({ images, index, onClose }) => {
   const pic = useRef(null)
 
   useEffect(() => {
-    const resetTreshold = () => 
-      window.innerWidth > 600
-        ? setTreshold(0.8)
-        : setTreshold(0.9)
-    
-    const handleKeyDown = (e) => {
-      switch(e.keyCode){
-        case 37:
-          if(hasPrev)
-            handleImgChange('prev')
-          break
-        case 39:
-          if(hasNext)
-            handleImgChange('next')
-          break
-        case 38:
-          handleZoomIn()
-          break
-        case 40:
-          handleZoomOut()
-          break
-        default: 
-          break
-      }
-    }
-
     document.addEventListener('resize', resetTreshold)
     document.addEventListener('keydown', handleKeyDown)
     return () => {
       document.removeEventListener('resize', resetTreshold)
       document.removeEventListener('keydown', handleKeyDown)
     }
-  }, [ handleImgChange, handleZoomIn, handleZoomOut, hasPrev, hasNext ])
+  })
   
   useEffect(() => {
     pic.current.width = initialWidth 
@@ -72,12 +46,17 @@ const Modal = ({ images, index, onClose }) => {
     } 
   }, [ zoom, zoomStep, treshold, initialWidth, unableToZoomIn, unableToZoomOut ])
 
+  const resetTreshold = () => 
+      window.innerWidth > 600
+        ? setTreshold(0.8)
+        : setTreshold(0.9)
+
   const handleImgChange = (dir) => {
     if(dir === 'prev'){ 
       setCurrent(current - 1)
-    } else { 
+    } else if(dir === 'next') { 
       setCurrent(current + 1)
-    }
+    } else return 
     setZoom(1)
     setUnableToZoomOut(true)
     setUnableToZoomIn(false)
@@ -129,6 +108,27 @@ const Modal = ({ images, index, onClose }) => {
         setZoom(zoom - zoomStep)
       } else setZoom(zoom - zoomStep)
       if(zoom === (1 + zoomStep)) setUnableToZoomOut(true)
+    }
+  }
+
+  const handleKeyDown = (e) => { 
+    switch(e.keyCode){
+      case 37:
+        if(hasPrev)
+          handleImgChange('prev')
+        break
+      case 39:
+        if(hasNext)
+          handleImgChange('next')
+        break
+      case 38:
+        handleZoomIn()
+        break
+      case 40:
+        handleZoomOut()
+        break
+      default: 
+        break
     }
   }
 
