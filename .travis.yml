@@ -7,6 +7,11 @@ before_install:
 script:
   - docker run -e CI=true ilyanesterow/test npm run test  -- --coverage
 
+after_success:
+  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD" docker.io
+  - docker build -t $DOCKER_USERNAME/lakta-prod .
+  - docker push $DOCKER_USERNAME/lakta-prod
+
 #deploy:
   #provider: heroku
   #api_key: $HEROKU_API_KEY
