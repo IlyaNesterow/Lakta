@@ -14,6 +14,7 @@ import InitialScene from './global/InitialScene'
 const App = () => {
   const [ langs ] = useState(['en', 'lv', 'ru'])
   const [ content, setContent ] = useState(null)
+  const [ showInitialScene, setShowInitialScene ] = useState(true)
   const [ secrets, setSecrets ] = useState(null)
 
   const theme = useSelector(state => state.theme)
@@ -24,8 +25,9 @@ const App = () => {
     fetch('https://temporary-lakta-storage.s3-us-west-2.amazonaws.com/data.json')
       .then(res => res.json())
       .then(res => {
-        setTimeout(() => setContent(res), 1000)
-      })
+        setContent(res)
+        setTimeout(() => setShowInitialScene(false), 1500)
+      }) 
       .catch(err => console.log(err.message))
   }, [])
 
@@ -83,13 +85,11 @@ const App = () => {
         image3={ content ? content.images.menu.third : '' }
         image4={ content ? content.images.menu.fourth : '' }
       />
-      { content === null
-        ? <InitialScene/>
-        : (
-            <ContentContext.Provider value={ content }>
-              <Router/>
-            </ContentContext.Provider>
-          )
+      { showInitialScene && <InitialScene/> }
+      { content !== null &&
+        <ContentContext.Provider value={ content }>
+          <Router/>
+        </ContentContext.Provider>
       }
     </>
   )

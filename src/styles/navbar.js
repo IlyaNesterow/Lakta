@@ -11,7 +11,7 @@ const NAV = styled.nav`
   background-color: ${ props => props.darkTheme ? '#111' : '#fff' };
   display: flex;
   justify-content: space-between;
-  z-index: 2;
+  z-index: 2; 
 
   #nav-link-area{
     display: flex;

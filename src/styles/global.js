@@ -25,11 +25,9 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
     min-height: 100vh;
   }
-
   a{
     text-decoration: none;
   }
-
   h1{
     color: #eac700;
     text-align: center;
@@ -38,21 +36,32 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
   }
-
   div#page-section{
     padding-top: 4rem;
     min-height: calc(100vh - 7.4rem);
     padding-bottom: 4rem;
   } 
-
-  div#initial-scene{
+  div#initial-scene, div#pic-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100vh; 
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
+  div#initial-scene{
+    background-color: ${ props => props.darkTheme ? '#111' : '#fefefe' }; 
+    z-index: 5;
+    transition: opacity .5s;
+  } 
+  .visible{
+    opacity: 1
+  }
+  .hidden{
+    opacity: 0;
+  }
   #menu-container{
     position: fixed;
     backdrop-filter: blur(7px);
@@ -60,7 +69,6 @@ const GlobalStyle = createGlobalStyle`
     height: calc(100vh - 3.8rem);
     width: 100vw;
   }
- 
   div#nav-link-area-tab {
     background-color: ${ props => props.darkTheme ? 'rgba(44, 44, 44, 0.1)' : 'rgba(230, 230, 250, 0.1)' };
     display: flex;
@@ -82,75 +90,57 @@ const GlobalStyle = createGlobalStyle`
     color: ${ props => props.darkTheme ? '#eee' : '#222' };
   } 
   div#pic-modal{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: ${ props => props.darkTheme ? 'rgba(0, 0, 0, 0.9)' : 'rgba(255, 255, 255, 0.9)' };
     backdrop-filter: blur(15px); 
     overflow: hidden;
     z-index: 3;
   }
-
   .modal-control{
     color: ${ props => props.darkTheme ? '#eee' : '#333' }; 
     font-size: 2rem;
     position: absolute;
   }
-
   #left-arrow{
     left: 1rem;
     padding-right: 1rem;
     padding-left: .5rem;
     transition: padding .5s;
   }
-
   #right-arrow{
     right: 1rem;
     padding-left: 1rem;
     padding-right: .5rem;
     transition: padding .5s;
   }
-
   #close-modal{
     top: .1rem;
     right: .5rem;
     transition: transform .5s;
     padding: 1rem;
   }
-
   #left-arrow:hover{
     padding-left: 0;
     padding-right: 1.5rem;
   }
-
   #right-arrow:hover{
     padding-right: 0;
     padding-left: 1.5rem;
   }
-
   #close-modal:hover{
     transform: rotate(90deg);
   }
-
   .current-image {  
     max-height: 100vh;
     max-width: 90vw;
     overflow: hidden;  
     box-shadow: 0 0 .2rem ${ props => props.darkTheme ? '#eee' : '#333' };
   }
- 
   #nav-link, #nav-link-tab{
     text-decoration: none;
     font-weight: 600;
     font-size: 1.5rem;
     color: ${ props => props.darkTheme ? '#fff' : '#111' };
   }
-
   #nav-link-tab{
     width: 50vw !important;
     padding: 1rem;
@@ -164,23 +154,18 @@ const GlobalStyle = createGlobalStyle`
     transition: background-color .5s;
     z-index: 2;
   }
-
   #nav-link-tab:nth-child(1){
     background-image: url('${ props => props.image1 }');
   }
-
   #nav-link-tab:nth-child(2){
     background-image: url('${ props => props.image2 }');
   }
-
   #nav-link-tab:nth-child(3){
     background-image: url('${ props => props.image3 }');
   }
-
   #nav-link-tab:nth-child(4){
     background-image: url('${ props => props.image4 }');
   }
-
   #nav-link-tab:hover{
     background-color: ${ props => props.darkTheme ? 'rgba(0,0,0,0.2)' : 'rgba(255,255,255,0.3)' };
   }
