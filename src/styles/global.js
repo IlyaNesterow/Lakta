@@ -42,9 +42,8 @@ const GlobalStyle = createGlobalStyle`
     padding-bottom: 4rem;
   } 
   div#initial-scene, div#pic-modal{
-    position: fixed;
-    top: 0;
     left: 0;
+    position: fixed;
     width: 100vw;
     height: 100vh; 
     display: flex;
@@ -54,13 +53,13 @@ const GlobalStyle = createGlobalStyle`
   div#initial-scene{
     background-color: ${ props => props.darkTheme ? '#111' : '#fefefe' }; 
     z-index: 5;
-    transition: opacity .5s;
+    transition: all .5s;
   } 
   .visible{
-    opacity: 1
+    top: 0;
   }
   .hidden{
-    opacity: 0;
+    top: -100vh;
   }
   #menu-container{
     position: fixed;
@@ -90,6 +89,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${ props => props.darkTheme ? '#eee' : '#222' };
   } 
   div#pic-modal{
+    top: 0;
     background-color: ${ props => props.darkTheme ? 'rgba(0, 0, 0, 0.9)' : 'rgba(255, 255, 255, 0.9)' };
     backdrop-filter: blur(15px); 
     overflow: hidden;
