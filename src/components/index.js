@@ -85,7 +85,7 @@ const App = () => {
         image3={ content ? content.images.menu.third : '' }
         image4={ content ? content.images.menu.fourth : '' }
       />
-      { showInitialScene && <InitialScene/> }
+      <InitialScene visible={ showInitialScene }/>
       { content !== null &&
         <ContentContext.Provider value={ content }>
           <Router/>

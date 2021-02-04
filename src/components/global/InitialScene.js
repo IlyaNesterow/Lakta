@@ -2,14 +2,18 @@ import React, { useEffect } from 'react'
 
 import Logo from './Logo'
 
-const Scene = () => {
+const Scene = ({ visible }) => {
   useEffect(() => {
-    document.body.style.overflow = 'hidden'
-    return () => document.body.style.overflow = 'unset'
+    visible
+      ? document.body.style.overflow = 'hidden'
+      : document.body.style.overflow = 'unset'
   })
 
-  return( 
-    <div id="initial-scene">
+  return(
+    <div 
+      id="initial-scene"
+      className={ visible ? 'visible' : 'hidden' }
+    >
       <Logo  
         height="20vh"
         width="20vh"

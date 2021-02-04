@@ -54,7 +54,14 @@ const GlobalStyle = createGlobalStyle`
   div#initial-scene{
     background-color: ${ props => props.darkTheme ? '#111' : '#fefefe' }; 
     z-index: 5;
+    transition: opacity .5s;
   } 
+  .visible{
+    opacity: 1
+  }
+  .hidden{
+    opacity: 0;
+  }
   #menu-container{
     position: fixed;
     backdrop-filter: blur(7px);
