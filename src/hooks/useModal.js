@@ -7,14 +7,14 @@ const useModal = (images) => {
   const [ modalOpened, setModalOpened ] = useState(false)
 
   useEffect(() => {
-    document.addEventListener('keydown', closeModalByPressingEsc)
-    return () => document.removeEventListener('keydown', closeModalByPressingEsc)
+    const close = (e) => {
+      if(e.keyCode === 27){
+        closeModal()
+      }
+    }
+    document.addEventListener('keydown', close)
+    return () => document.removeEventListener('keydown', close)
   }, [])
-  
-  const closeModalByPressingEsc = (e) => {
-    if (e.keyCode == 27) 
-      closeModal()
-  }
 
   const imgClickHandler = (index) => {
     setModalOpened(true)
