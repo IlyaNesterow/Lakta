@@ -21,9 +21,39 @@ const Modal = ({ images, index, onClose }) => {
   const pic = useRef(null)
 
   useEffect(() => {
+    const resetTreshold = () => 
+      window.innerWidth > 600
+        ? setTreshold(0.8)
+        : setTreshold(0.9)
+    
+    const handleKeyDown = (e) => {
+      switch(e.keyCode){
+        case 37:
+          if(hasPrev)
+            handleImgChange('prev')
+          break
+        case 39:
+          if(hasNext)
+            handleImgChange('next')
+          break
+        case 38:
+          handleZoomIn()
+          break
+        case 40:
+          handleZoomOut()
+          break
+        default: 
+          break
+      }
+    }
+
     document.addEventListener('resize', resetTreshold)
-    return () => document.removeEventListener('resize', resetTreshold)
-  })
+    document.addEventListener('keydown', handleKeyDown)
+    return () => {
+      document.removeEventListener('resize', resetTreshold)
+      document.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [])
   
   useEffect(() => {
     pic.current.width = initialWidth 
@@ -41,11 +71,6 @@ const Modal = ({ images, index, onClose }) => {
       ) setUnableToZoomIn(true)
     } 
   }, [ zoom, zoomStep, treshold, initialWidth, unableToZoomIn, unableToZoomOut ])
-
-  const resetTreshold = () => 
-    window.innerWidth > 600
-      ? setTreshold(0.8)
-      : setTreshold(0.9)
 
   const handleImgChange = (dir) => {
     if(dir === 'prev'){ 
