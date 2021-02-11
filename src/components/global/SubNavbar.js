@@ -13,7 +13,7 @@ const SubNavbar = ({ content, lang, ctx = 'ctx' }) => {
           borderBottom: 'solid 1px #2266ff'
         }}
       >{
-        l[ ctx ][ lang ]
+        l[ ctx ][ lang ].toUpperCase()
       }</NavLink>
     )
   

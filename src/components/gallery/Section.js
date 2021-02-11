@@ -9,9 +9,9 @@ const Section = ({ data, lang }) => {
 
   return(
     <>
-      <h3>{ data.title[ lang ][0].toUpperCase() + data.title[ lang ].substring(1) }</h3>
+      <h3>{ data.title[ lang ].toUpperCase() }</h3>
       <ImageSection
-        pics={ data.pictures }
+        pics={ data.pictures } 
         imgOnClick={ imgClickHandler }
       />
       { component }

@@ -27,7 +27,7 @@ const App = () => {
       .then(res => {
         setContent(res)
         setTimeout(() => setShowInitialScene(false), 1500)
-      }) 
+      })  
       .catch(err => console.log(err.message))
   }, [])
 
@@ -50,8 +50,9 @@ const App = () => {
         else lang = 'lv'
       }
       dispatch(change(lang))
+      if(secrets) setSecrets(null)
     }
-    checkLang()
+    if(secrets) checkLang()
   }, [ dispatch, langs, secrets ]) 
 
   useEffect(_ => {

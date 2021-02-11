@@ -8,5 +8,6 @@ spec:
     app: client
   ports:
     - port: 3050
-      targetPort: 80
+      targetPort: 443
       nodePort: 31516
+

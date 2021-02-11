@@ -1,8 +1,10 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { useSelector } from 'react-redux'
 
+import Container from '../../styles/textBox'
 
-const TextBox = ({ labels }) => {
+
+const TextBox = ({ labels, top = '45%', left = '50%' }) => {
   const [ index, setIndex ] = useState(0)
  
   const first = useRef(null)
@@ -32,20 +34,25 @@ const TextBox = ({ labels }) => {
       index < labels.length - 1
         ? setIndex(index + 1)
         : setIndex(0)
-    }, 5000)
+    }, 7000)
     return () => clearInterval(interval)
-  })
+  }) 
 
   return(
-    <div id="text-box">
-      <h2 id="prev" ref={ first }>
-        { labels[ 0 ][ lang ] }
-      </h2>
-      <h2 ref={ second } id="current">
-        { labels[ 1 ][ lang ] } 
-      </h2>
-      <h2 ref={ third } id="next">{ labels[ 2 ][ lang ] }</h2>
-    </div>
+    <Container
+      top={ top }
+      left={ left }
+    >
+      <div id="text-box">
+        <h2 id="prev" ref={ first }>
+          { labels[ 0 ][ lang ] }
+        </h2>
+        <h2 ref={ second } id="current">
+          { labels[ 1 ][ lang ] } 
+        </h2>
+        <h2 ref={ third } id="next">{ labels[ 2 ][ lang ] }</h2>
+      </div>
+    </Container>
   )
 }
 

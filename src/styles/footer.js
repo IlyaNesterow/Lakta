@@ -12,18 +12,7 @@ const Footer = styled.footer`
     background-color: ${ props => props.darkTheme ? '#111' : '#f9f9ff' };
   }
   box-shadow: 0 0 .1rem ${ props => props.darkTheme ? '#eee' : '#222' };
-  div#languages{
-    display: flex;
-    align-items: center; 
-    font-size: 1.6rem;
-    margin-top: .5rem;
-  }
-  div#languages p{
-    font-size: 1.1rem;
-  }
-  div#languages div{
-    padding: .5rem;
-  }
+  
   .current-lang{
     background-color: #3377ffaa;
     border-radius: 1rem;
@@ -33,45 +22,29 @@ const Footer = styled.footer`
     display: flex;
     align-items: center;
   }
-  #networks-icons{
-    margin-top: 1rem;
+  #networks{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  #whatsapp{
-    color: #33cc77;
-  }
-  #instagram{
-    color: #cccc33;
-  }
-  #pinterest{
-    color: #ff3333;
-  }
-  #facebook{
-    color: #3377ff;
-  }
-  #networks-icons a{   
-    font-size: 2rem;
+  #networks svg{
+    font-size: 2.7rem;
     padding: .5rem;
-  }
-  #repository{
-    margin-top: 1rem; 
-    margin-left: .3rem;
-  }
-  #repository a{
-    color: ${ props => props.darkTheme ? '#eee' : '#222' };
-    font-weight: 600;
-    font-size: 1.3rem; 
-    margin-right: .7rem;
-  }
-  #repository svg{
-    margin-right: .4rem;
-    font-size: 1.5rem;
-    color: #3377ff;
+    color: ${ props => props.darkTheme ? '#eee' : '#222' }; 
   }
   #copyright{
     background-color: ${ props => props.darkTheme ? '#12121f' : '#eeeeff' };
     padding: 1rem;
     color: ${ props => props.darkTheme ? '#eee' : '#222' };
     text-align: center;
+  }
+  #copyright p{
+    font-family: Montserrat, sans-serif;
+    padding: .2rem 0; 
+  }
+  #author{
+    font-weight: 500;
+    font-family: 'IBM Plex Sans', sans-serif; 
   }
   p{
     font-family: 'Noto Sans JP', sans-serif;
@@ -89,40 +62,14 @@ const Footer = styled.footer`
     #left-part, #networks{
       margin-bottom: 1.2rem;
     }
-    #networks{
-      margin-right: 2vw;
-      margin-top: .6rem;
-      justify-content: center;
-    }
-    #networks-icons{
-      margin-top: .5rem;
-    }
-    #networks-icons a{   
-      font-size: 1.5rem;
-    }
     #middle-part{
       margin-bottom: 1.5rem;
       justify-content: center;
-    }
-    #languages{
-      margin-right: 2.9rem;
-    }
-    div#languages p{
-      font-size: 1rem;
-    }
-    div#languages div{
-      padding: .05rem .25rem;
-      margin-right: .4rem; 
-      margin-bottom: .75rem;
     }
   }
   @media only screen and (max-width: 600px){ 
     #upper-pannel{
       display: block;
-    }
-    #repository{
-      margin-top: .5rem; 
-      margin-left: .3rem;
     }
     #languages{
       margin-left: .1rem;

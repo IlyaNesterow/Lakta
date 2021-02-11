@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Links from './Links'
-import Toggler from './ThemeToggler'
 import Nav from '../../../styles/navbar'
 import { useSelector } from 'react-redux'
 import MenuLabel from '../menu/MenuLabel'
-import Logo from '../Logo'
+import LogoSection from './LogoSection'
+import LanguagesAndTheme from './LanguagesAndTheme'
 
 
 const Navbar = () => {
@@ -12,10 +13,12 @@ const Navbar = () => {
   
   return(
     <Nav darkTheme={ theme }>
-      <Logo/>
+      <Link to="/">
+        <LogoSection/>
+      </Link>
       <MenuLabel/>
       <Links/>
-      <Toggler/>
+      <LanguagesAndTheme/>
     </Nav>
   )
 }

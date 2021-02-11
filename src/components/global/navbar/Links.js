@@ -15,7 +15,8 @@ const Links = ({ id = 'nav-link-area', navLinkId = 'nav-link', onClick = () => {
         id={ navLinkId }
         activeStyle={{
           color: '#3355ff',
-          fontWeight: '900'
+          fontWeight: '900',
+          borderBottom: 'solid 1px #3355ff'
         }}
         onClick={ onClick }
         to={ el.link }

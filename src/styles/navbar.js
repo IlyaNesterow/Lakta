@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 
 const NAV = styled.nav`
-  padding: 1rem;
   position: fixed !important;
   top: 0;
   left: 0;
@@ -14,14 +13,24 @@ const NAV = styled.nav`
   z-index: 2; 
 
   #nav-link-area{
+    margin-left: 7rem;
+    padding-top: 1.5rem;
     display: flex;
     justify-content: space-between;
   }
 
   #nav-link{
-    padding: .1rem 2rem;
-    font-size: 1.2rem;
-    color: ${ props => props.darkTheme ? '#fff' : '#333' };
+    padding: .4rem .2rem;
+    margin: 0 1.8rem;
+    font-size: .9rem;
+    color: ${ props => props.darkTheme ? '#fff' : '#111' };
+  }
+
+  #languages-and-theme{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2rem;
   }
 
   #Menu{
@@ -30,6 +39,23 @@ const NAV = styled.nav`
 
   #Menu svg{
     margin-left: 1.5rem;
+  }
+
+  #logo-section{
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  #logo-section p{
+    margin-left: 1rem;
+    color: ${ props => props.darkTheme ? '#fff' : '#333' };
+  }
+
+  #company-name{
+    color: #888;
+    font-weight: 500;
+    font-family: 'IBM Plex Sans', sans-serif;
   }
 
   .normal{

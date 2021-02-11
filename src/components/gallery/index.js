@@ -21,7 +21,7 @@ const Main = () => {
           darkTheme={ theme }
           id="page-section"
         >
-          <h1>{ content.gallery.title[ lang ] }</h1>
+          <h1>{ content.gallery.title[ lang ].toUpperCase() }</h1>
           <Scroller/>
           <Router lang={ lang }>
             <SubNavbar

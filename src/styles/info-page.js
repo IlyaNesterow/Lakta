@@ -10,59 +10,28 @@ const Page = styled.div`
   transition: background-color .5s;
   
   h1{
-    margin-top: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
   }
 
   :hover{
     background-color: ${ props => props.darkTheme ? 'rgba(0,0,0,0.6)' : 'rgba(255,255,255,0.6)' };
   }
 
-  #sub-title{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1.3rem auto;
-  }
-  #sub-title svg{
-    font-size: 1.7rem;
-    color: ${ props => props.darkTheme ? '#ddddff' : '#335' };
-  }
-  #sub-title h3{
-    font-size: 1.4rem;
-    color: ${ props => props.darkTheme ? '#dddddd' : '#333' };
-  }
   #sub-section{
     display: flex;
     align-items: center;
-    margin: .8rem auto;
-  }
-  #sub-section svg{
-    font-size: 1.2rem;
-    margin-right: .5rem;
-    width: 3rem;
-    color: #3377ff; 
+    margin: 1rem auto;
   }
   #sub-section p{
     font-size: 1.2rem;
     color: ${ props => props.darkTheme ? '#eef' : '#222' };
-    font-weight: 300; 
   }
-  #sub-section-key{
+  #sub-section-key, h3{
     font-weight: 800;
     color: ${ props => props.darkTheme ? '#aaa' : '#666' };
   }
   @media only screen and (max-width: 800px){
-    #sub-title{
-      display: flex;
-      justify-content: left;
-    }
-    #sub-title svg{
-      width: 25px;
-      margin-right: 0.8rem;
-    }
-    #sub-title h3{
-      font-size: 1.2rem;
-    }
     #sub-section{
       margin: .7rem auto;
     }

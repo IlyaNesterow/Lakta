@@ -20,7 +20,7 @@ const Main = () => {
           id="page-section"
           darkTheme={ theme }
         >
-          <h1>{ content.about.title[ lang ] }</h1>
+          <h1>{ content.about.title[ lang ].toUpperCase() }</h1>
           <Router 
             lang={ lang }
             theme={ theme }

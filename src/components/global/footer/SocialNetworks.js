@@ -1,5 +1,4 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
 import { faWhatsapp, faPinterest, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 import { ContentContext } from '../../../utils/contexts'
@@ -7,8 +6,6 @@ import SocialNetwork from './SocialNetwork'
 
 
 const Networks = () => {
-  const lang = useSelector(state => state.lang)
-
   const icons = {
     instagram: faInstagram,
     pinterest: faPinterest,
@@ -22,7 +19,6 @@ const Networks = () => {
       const icon = 
         <SocialNetwork 
           icon={ icons[ app ] }
-          id={ app }
           url={ data[ app ].url }
           key={ data[ app ].url }
         />
@@ -33,12 +29,9 @@ const Networks = () => {
 
   return(
     <ContentContext.Consumer>
-      {content =>
+      {content => 
         <div id="networks">
-          <p>{ content.footer.connections[ lang ] }</p>
-          <div id="networks-icons"> 
-            { createIcons(content.footer.apps) }
-          </div>
+          { createIcons(content.footer.apps) }
         </div>
       }
     </ContentContext.Consumer>
