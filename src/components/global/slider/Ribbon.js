@@ -4,13 +4,11 @@ import Slide from '../../../styles/slide'
 import Container from '../../../styles/ribbon'
 
 
-const Ribbon = ({ images }) => {
+const Ribbon = ({ images, time = 6 }) => {
   const [ current, setCurrent ] = useState(0)
   const [ width, setWidth ] = useState(window.innerWidth)
   const [ transformX, setTransformX ] = useState(0)
   const [ next, setNext ] = useState(true)
-
-  console.log(images) 
 
   useEffect(() => {
     const resetWidth = () => setWidth(window.innerWidth)
@@ -24,13 +22,10 @@ const Ribbon = ({ images }) => {
         setCurrent(current + 1)
         setNext(true)
       } else if(current === images.length - 1){
-        setNext(false)
         setCurrent(current - 1)
-      } else if(current < images.length - 1) 
-        next
-          ? setCurrent(current + 1)
-          : setCurrent(current - 1)
-    }, 7000)
+        setNext(false)
+      } else next ? setCurrent(current + 1) : setCurrent(current - 1)
+    }, time * 1000)
     return () => clearInterval(interval)
   }) 
 
@@ -39,19 +34,19 @@ const Ribbon = ({ images }) => {
     [ current, width ]
   )
 
-  console.log(transformX, width, current)
-
   const createElements = () => 
     images.map((img, index) => 
       <Slide 
         bgImage={ img }
-        width={ width }
         key={ img + index }
       />
     )
 
   return(
-    <Container transformX={ `translateX(${ transformX })` }>
+    <Container 
+      transformX={ `translateX(-${ transformX }px)` }
+      transition="2"
+    >
       { createElements() }
     </Container>
   )
