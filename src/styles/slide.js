@@ -16,7 +16,6 @@ const Slide = styled.div`
     width: 100vw !important; height: 100% !important;
     background-image: url(${ props => props.bgImage });
     background-size: cover;
-    filter: grayscale(100%);
   }
 `
 

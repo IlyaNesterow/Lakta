@@ -18,7 +18,9 @@ const LogoSection = () => {
             fill="#888"
           />
           <p> 
-            { content.navbar.logoSection[ lang ].split(' ').slice(0, 2).join(' ').toUpperCase() }
+            <span id="ceo-name">
+              { content.navbar.logoSection[ lang ].split(' ').slice(0, 2).join(' ').toUpperCase() }
+            </span>
             <span id="company-name"> 
               { ' ' + (content.navbar.logoSection[ lang ].split(' ').pop().toUpperCase() || ' ') }
             </span> 

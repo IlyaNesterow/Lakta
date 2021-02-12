@@ -3,19 +3,22 @@ import styled from 'styled-components'
 
 const Page = styled.div`
   padding: 2rem 10%;
-  background-image: url(${ props => props.imageUrl });
-  background-color: ${ props => props.darkTheme ? 'rgba(16,16,16,0.99)' : 'rgba(255,255,255,0.95)' };
+  background-color: ${ props => props.darkTheme ? 'rgba(16,16,16,0.7)' : 'rgba(255,255,255,0.9)' };
   background-blend-mode: overlay;
-  background-size: cover;
   transition: background-color .5s;
-  
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+
   h1{
-    margin-top: 4rem;
+    margin-top: 7rem;
     margin-bottom: 3rem;
+    font-weight: 800;
   }
 
   :hover{
-    background-color: ${ props => props.darkTheme ? 'rgba(0,0,0,0.6)' : 'rgba(255,255,255,0.6)' };
+    background-color: ${ props => props.darkTheme ? 'rgba(0,0,0,0.5)' : 'rgba(255,255,255,0.7)' };
   }
 
   #sub-section{

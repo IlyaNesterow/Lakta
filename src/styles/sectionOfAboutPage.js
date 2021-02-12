@@ -3,15 +3,15 @@ import styled from 'styled-components'
 
 const Section = styled.div`
   padding: 2rem 10%;
-  height: 70vh;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  position: absolute;
   background-color: ${ props => props.darkTheme ? 'rgba(0,0,0,0.6)' : 'rgba(255,255,255,0.6)' };
   display: flex;
   justify-content: center;
   align-items: center;
   background-blend-mode: overlay;
-  background-size: cover;
   transition: background-color .5s;
-  background-image: url(${ props => props.image });
   
   @media only screen and (min-width: 850px){
     p{

@@ -69,7 +69,7 @@ const App = () => {
   }
 
   const setDefaults = () => {
-    dispatch(setDefault(false))
+    dispatch(setDefault(true))
     dispatch(change('lv'))
   }
 

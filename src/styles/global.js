@@ -52,28 +52,22 @@ const GlobalStyle = createGlobalStyle`
   }
   div#initial-scene{
     background-color: ${ props => props.darkTheme ? '#111' : '#fefefe' }; 
-    z-index: 5;
+    z-index: 6;
     transition: all .5s;
   } 
+  .menu-hidden{
+    transition: right .5s;
+    right: -100vw;
+  }
+  .menu-opened{ 
+    transition: right .5s;
+    right: 0;
+  }
   .visible{
     top: 0;
   }
   .hidden{
     top: -100vh;
-  }
-  #menu-container{
-    position: fixed;
-    backdrop-filter: blur(7px);
-    top: 3.8rem;
-    height: calc(100vh - 3.8rem);
-    width: 100vw;
-  }
-  div#nav-link-area-tab {
-    background-color: ${ props => props.darkTheme ? 'rgba(44, 44, 44, 0.1)' : 'rgba(230, 230, 250, 0.1)' };
-    display: flex;
-    flex-wrap: wrap;
-    height: 100% !important;
-    width: 100% !important;
   }
   #sub-navbar{
     display: flex;
@@ -93,7 +87,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${ props => props.darkTheme ? 'rgba(0, 0, 0, 0.9)' : 'rgba(255, 255, 255, 0.9)' };
     backdrop-filter: blur(15px); 
     overflow: hidden;
-    z-index: 3;
+    z-index: 5;
   }
   .modal-control{
     color: ${ props => props.darkTheme ? '#eee' : '#333' }; 
@@ -135,39 +129,10 @@ const GlobalStyle = createGlobalStyle`
     overflow: hidden;  
     box-shadow: 0 0 .2rem ${ props => props.darkTheme ? '#eee' : '#333' };
   }
-  #nav-link, #nav-link-tab{
-    text-decoration: none;
+  #nav-link{
     font-weight: 600;
     font-size: 1.5rem;
     color: ${ props => props.darkTheme ? '#fff' : '#111' };
-  }
-  #nav-link-tab{
-    width: 50vw !important;
-    padding: 1rem;
-    display: flex;
-    position: relative; 
-    align-items: center;
-    justify-content: center;
-    background-color: ${ props => props.darkTheme ? 'rgba(0,0,0,0.8)' : 'rgba(255,255,255,0.8)' };
-    background-blend-mode: overlay;
-    background-size: cover;
-    transition: background-color .5s;
-    z-index: 2;
-  }
-  #nav-link-tab:nth-child(1){
-    background-image: url('${ props => props.image1 }');
-  }
-  #nav-link-tab:nth-child(2){
-    background-image: url('${ props => props.image2 }');
-  }
-  #nav-link-tab:nth-child(3){
-    background-image: url('${ props => props.image3 }');
-  }
-  #nav-link-tab:nth-child(4){
-    background-image: url('${ props => props.image4 }');
-  }
-  #nav-link-tab:hover{
-    background-color: ${ props => props.darkTheme ? 'rgba(0,0,0,0.2)' : 'rgba(255,255,255,0.3)' };
   }
   #zoom-bar{
     position: absolute;
@@ -202,19 +167,7 @@ const GlobalStyle = createGlobalStyle`
       margin-left: 5%; 
     }
   } 
-  @media only screen and (min-width: 850px){
-    div#nav-link-area-tab{
-      display: none;
-    }
-  }
   @media only screen and (max-width: 600px){ 
-    #nav-link-tab{
-      width: 100vw !important;
-      padding: 1rem;
-    }
-    #nav-link-area-tab{
-      max-height: calc(90vh - 3.8rem) !important;
-    }
     #zoom-bar{
       bottom: 2.5rem;
     }

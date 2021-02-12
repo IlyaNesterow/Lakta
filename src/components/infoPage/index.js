@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import Page from '../../styles/info-page'
 import { ContentContext } from '../../utils/contexts'
 import SubSection from './SubSection'
+import Slider from '../global/slider'
  
  
 const Main = () => {
@@ -20,19 +21,23 @@ const Main = () => {
         key={ index + item.field } 
       />
     ) 
- 
+  
   return(
     <ContentContext.Consumer>
       {content => 
-        <Page 
-          id="page-section"
-          darkTheme={ theme }
-          imageUrl={ content.info.bgImage }
+        <Slider
+          height="calc(100vh - 7.4rem)"
+          images={ content.info.slider.images }
+          time={ content.info.slider.time }
         >
-          <h1>{ content.info.title[ lang ].toUpperCase() }</h1>
-          <h3>{ content.info.subtitle[ lang ].toUpperCase() }</h3>
-          { generateSections(content.info._info) }
-        </Page>
+          <Page 
+            darkTheme={ theme }
+          >
+            <h1>{ content.info.title[ lang ].toUpperCase() }</h1>
+            <h3>{ content.info.subtitle[ lang ].toUpperCase() }</h3>
+            { generateSections(content.info._info) }
+          </Page>
+        </Slider>
       }
     </ContentContext.Consumer>
   )

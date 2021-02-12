@@ -15,7 +15,13 @@ const Copyright = () => {
               { content.footer.copyright }
             </p>
             <p>
-              { content.footer.designedBy[ lang ] }: <span id="author">{ content.footer.author }</span>
+              <a
+                href={ content.author.url }
+                target="_blank"
+                rel="noreferrer"
+              >
+                { content.footer.designedBy[ lang ] }: <span id="author">{ content.author.name }</span>
+              </a>
             </p>
           </>
         }

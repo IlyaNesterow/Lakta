@@ -31,7 +31,8 @@ const Images = styled.div`
   @media only screen and (max-width: 600px){
     display: block;
     #image-section{
-      width: 100% ;
+      width: 100%;
+      padding: 0;
     }
     img{
       margin-bottom: 1rem;

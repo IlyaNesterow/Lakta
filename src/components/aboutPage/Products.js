@@ -2,6 +2,7 @@ import React from 'react'
 
 import Section from '../../styles/sectionOfAboutPage'
 import { ContentContext } from '../../utils/contexts'
+import Slider from '../global/slider' 
 
 
 const Products = ({ lang, theme }) => {
@@ -11,22 +12,25 @@ const Products = ({ lang, theme }) => {
         id="products" 
         key={ pr.en }  
       >
-        { pr[ lang ] + (i < data.products.length - 1 ? ', ' : '.') }
+        { pr[ lang ].toUpperCase() + (i < data.products.length - 1 ? ', ' : '.') }
       </span>
     )
 
   return(
     <ContentContext.Consumer>
       {content => 
-        <Section
-          image={ content.about.bgImages[2] }
-          darkTheme={ theme }
+        <Slider
+          images={ content.about.bgImages[2] }
+          height="70vh"
+          bars
         >
-          <p>
-            { content.about.productsWord[ lang ] + ': ' }
-            { generateProds(content.about) }
-          </p>
-        </Section>
+          <Section darkTheme={ theme }>
+            <p>
+              { content.about.productsWord[ lang ].toUpperCase() + ': ' }
+              { generateProds(content.about) }
+            </p>
+          </Section>
+        </Slider>
       }
     </ContentContext.Consumer>
   )

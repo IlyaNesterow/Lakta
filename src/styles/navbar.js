@@ -10,7 +10,7 @@ const NAV = styled.nav`
   background-color: ${ props => props.darkTheme ? '#111' : '#fff' };
   display: flex;
   justify-content: space-between;
-  z-index: 2; 
+  z-index: 5; 
 
   #nav-link-area{
     margin-left: 7rem;
@@ -57,72 +57,80 @@ const NAV = styled.nav`
     font-weight: 500;
     font-family: 'IBM Plex Sans', sans-serif;
   }
-
   .normal{
     color: ${ props => props.darkTheme ? '#fff' : '#333' }
   }
-
   .active{
     color: #3355ff;
   }
-
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 3.6rem;
-    height: 1.8rem;
-    outline: none;
+  #Menu{
+    width: 1.3rem;
+    margin-top: 1.8rem;
+    margin-right: 2rem;
+    display: none;
+  } 
+  #Menu div{
+    width: 100%;
+    height: 2px;
+    background-color: ${ props => props.darkTheme ? '#fff' : '#333' }; 
   }
-
-  .switch input {
+  #top, #middle, #bottom{
     position: absolute;
-    top: -99999px;
-    left: -99999px;
+    transition: all .3s; 
   }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #333;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 1.8rem;
+  #top{
+    left: 0; top: 0;
   }
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 1.44rem;
-    width: 1.44rem;
-    left: .15rem;
-    bottom: .18rem;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 50%;
+  #middle{
+    left: 0; top: .5rem;
   }
-  input:checked + .slider {
-    background-color: #fff;
+  #bottom{
+    left: 0; top: 1rem;
   }
-  input:checked + .slider:before {
-    background-color: #333;
-  }
-  input:checked + .slider:before {
-    -webkit-transform: translateX(1.8rem);
-        -ms-transform: translateX(1.8rem);
-            transform: translateX(1.8rem);
-  }
-
-  @media only screen and (max-width: 800px){
+  @media only screen and (max-width: 1120px){
     #nav-link-area{
+      display: none;
+    }
+    #languages-and-theme{
       display: none;
     }
     #Menu{
       display: block;
+      position: relative;
+      align-items: center;
+      margin-right: 2rem;
     } 
+    .opened > #middle{
+      opacity: 1; 
+      width: 100%;
+      margin-left: 0;
+    } 
+    .closed > #middle{
+      opacity: 0;
+      width: 0;
+      margin-left: 50%;
+    }
+    .closed > #top{
+      transform: rotate(45deg);
+      top: .5rem;
+    }
+    .closed > #bottom{
+      transform: rotate(-45deg);
+      top: .5rem;
+    }
+  }
+  @media only screen and (max-width: 850px){ 
+    #logo-section{
+      margin-left: 1rem;
+    }
+    #logo-section p{
+      margin-left: .2rem;
+    }
+  }
+  @media only screen and (max-width: 550px){ 
+    #ceo-name{
+      display: none;
+    }
   }
 `
 

@@ -2,17 +2,21 @@ import React from 'react'
 
 import Section from '../../styles/sectionOfAboutPage'
 import { ContentContext } from '../../utils/contexts'
+import Slider from '../global/slider'
 
 
 const Introduction = ({ lang, theme }) => (
   <ContentContext.Consumer>
     {content => 
-      <Section 
-        image={ content.about.bgImages[0] }
-        darkTheme={ theme }
+      <Slider
+        images={ content.about.bgImages[0] }
+        height="70vh"
+        bars
       >
-        <p>{ content.about.inShort[ lang ] }</p>
-      </Section>
+        <Section darkTheme={ theme }>
+          <p>{ content.about.inShort[ lang ] }</p>
+        </Section>
+      </Slider>
     }
   </ContentContext.Consumer>
 )

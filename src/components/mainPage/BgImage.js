@@ -26,28 +26,34 @@ const BgImage = () => {
       {content => 
         <Slider
           height="calc(100vh - 4rem)"
-          images={ content.main.slider.bgImages }
+          images={ content.main.images }
+          time={ content.main.slider.time }
+          bars
+          controls
         >
           <TextBox 
-            labels={
+            className="right"
+            labels={ 
               makeUpperCase(content.main.slider.labels)
             }
             top="10%"
             left="75%"
           />
           <TextBox 
+            className="central" 
             labels={ 
               shuffleLabels(makeUpperCase(content.main.slider.labels), 2) 
             }
           />
           <TextBox 
+            className="left"
             labels={ 
               shuffleLabels(makeUpperCase(content.main.slider.labels), 1)
             }
             top="80%"
             left="25%"
           />
-          <Author author={ content.main.slider.author }/> 
+          <Author/> 
         </Slider>
       }
     </ContentContext.Consumer>

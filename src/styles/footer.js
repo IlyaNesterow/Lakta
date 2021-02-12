@@ -51,6 +51,9 @@ const Footer = styled.footer`
     font-weight: 300;
     color: #888;
   }
+  a{
+    color: ${ props => props.darkTheme ? '#bbb' : '#333' }; 
+  }
   @media only screen and (max-width: 850px){ 
     #upper-pannel{
       padding: 0.5rem 1rem;
@@ -73,6 +76,9 @@ const Footer = styled.footer`
     }
     #languages{
       margin-left: .1rem;
+    }
+    #networks{
+      max-width: 10rem;
     }
     #middle-part{
       margin-bottom: 1.5rem;

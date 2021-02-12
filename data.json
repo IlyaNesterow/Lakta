@@ -1,0 +1,490 @@
+{
+    "page_not_found": {
+        "en": "Page not found",
+        "lv": "Lapaspuse neexsiste",
+        "ru": "Страница не найдена" 
+    },
+    "images": {
+        "menu": {
+            "first": "https://upload.wikimedia.org/wikipedia/commons/1/1e/San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg",
+            "second": "https://upload.wikimedia.org/wikipedia/commons/1/1e/San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg",
+            "third": "https://upload.wikimedia.org/wikipedia/commons/1/1e/San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg",
+            "fourth": "https://upload.wikimedia.org/wikipedia/commons/1/1e/San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg"
+        }
+    },
+    "about": {
+        "title": {
+            "en": "About",
+            "lv": "Par",
+            "ru": "про"
+        },
+        "subnavbar": {
+            "links": [
+                {
+                    "url": "intro",
+                    "ctx": { 
+                        "en": "Introduction",
+                        "lv": "Ievads",
+                        "ru": "Введение" 
+                    }
+                },
+                {
+                    "url": "onproducts",
+                    "ctx": {
+                        "en": "About products",
+                        "lv": "Par produktiem",
+                        "ru": "О продуктах"
+                    }
+                },
+                {
+                    "url": "products",
+                    "ctx": {
+                        "en": "Products",
+                        "lv": "Produkti",
+                        "ru": "Продукты"
+                    }
+                }
+            ]
+        },
+        "inShort": {
+            "en": "The company produces high-quality metalic constructions and other products from black steel, stainless steel and non-ferrous metals.",
+            "lv": "Uzņēmums izgatavo augstas klases metāla konstrukcijas un izstrādājumus no melnā, nerūsējošā un krāsainiem metāliem.",
+            "ru": "Предприятие производит конструкции и изделия высокого качества из черной стали, нержавеющей стали и цветных металов."
+        },
+        "onProducts": {
+            "en": "These are individual products with high significance.",
+            "lv": "Tie ir individuāli izstrādājumi ar augstu pievienoto vērtību.",
+            "ru": "Это индивидуальные продукты с высокой ценностью."
+        },
+        "productsWord": {
+            "en": "Products",
+            "lv": "Produkti",
+            "ru": "Продукты"
+        },
+        "bgImages": [
+            [
+                "http://lakta.lv/images/lakta-metala-kaluma-margas-4-small.jpg",
+                "http://lakta.lv/images/lakta-dekorativs-metala-kaluma-objekts-small.jpg",
+                "http://lakta.lv/images/lakta-metala-kaluma-varti-4-small.jpg"
+            ],
+            [
+                "http://lakta.lv/images/lakta-metala-kaluma-margas-4-small.jpg",
+                "http://lakta.lv/images/lakta-dekorativs-metala-kaluma-objekts-small.jpg",
+                "http://lakta.lv/images/lakta-metala-kaluma-varti-4-small.jpg"
+            ],
+            [
+                "http://lakta.lv/images/lakta-metala-kaluma-margas-4-small.jpg",
+                "http://lakta.lv/images/lakta-dekorativs-metala-kaluma-objekts-small.jpg",
+                "http://lakta.lv/images/lakta-metala-kaluma-varti-4-small.jpg"
+            ]
+        ],
+        "products": [
+            {
+                "en": "gates",
+                "lv": "vārti",
+                "ru": "ворота"
+            },
+            {
+                "en": "railings",
+                "lv": "margas",
+                "ru": "перила"
+            },
+            {
+                "en": "stairs",
+                "lv": "kāpnes",
+                "ru": "лестницы"
+            },
+            {
+                "en": "candlesticks",
+                "lv": "svečturi",
+                "ru": "подсвечники"
+            },
+            {
+                "en": "torches",
+                "lv": "lukturi",
+                "ru": "фанарики"
+            },
+            {
+                "en": "chandeliers",
+                "lv": "lustras",
+                "ru": "люстры"
+            },
+            {
+                "en": "fireplaces",
+                "lv": "kamīni",
+                "ru": "камины"
+            },
+            {
+                "en": "windmills",
+                "lv": "vējrāži",
+                "ru": "флюреры"
+            },
+            {
+                "en": "bridges",
+                "lv": "tiltiņi",
+                "ru": "мостики"
+            },
+            {
+                "en": "fences",
+                "lv": "žogi",
+                "ru": "ограды"
+            },
+            {
+                "en": "yards",
+                "lv": "sētas",
+                "ru": "дворы"
+            },
+            {
+                "en": "roofs",
+                "lv": "jumtiņi",
+                "ru": "крышы"
+            },
+            {
+                "en": "sun clocks",
+                "lv": "saulespulksteņi",
+                "ru": "солнечные часы"
+            },
+            {
+                "en": "metalic constructions",
+                "lv": "metāla konstrukcijas",
+                "ru": "металические конструкции"
+            },
+            {
+                "en": "signboards",
+                "lv": "izkārtnes",
+                "ru": "вывески"
+            },
+            {
+                "en": "anchors",
+                "lv": "eņģes",
+                "ru": "якоря"
+            },
+            {
+                "en": "doorhandles",
+                "lv": "rokturi",
+                "ru": "дверные ручки"
+            },
+            {
+                "en": "hangers",
+                "lv": "pakaramie",
+                "ru": "вешалки"
+            },
+            {
+                "en": "tables",
+                "lv": "galdi",
+                "ru": "столы"
+            },
+            {
+                "en": "armchairs",
+                "lv": "krēsli",
+                "ru": "кресла"
+            },
+            {
+                "en": "benches",
+                "lv": "soli",
+                "ru": "скамейки"
+            },
+            {
+                "en": "flower holders",
+                "lv": "puķturi",
+                "ru": "цветочные подставки"
+            },
+            {
+                "en": "etc",
+                "lv": "utt",
+                "ru": "итд"
+            }
+        ]
+    },
+    "footer": {
+        "rightPart": {
+            "en": "SLR Lakta",
+            "ru": "ООО Лакта",
+            "lv": "SIA Lakta"
+        },
+        "apps": {
+            "whatsapp": {
+                "url": "https://wa.me/37129459776",
+                "icon": "whatsapp"
+            },
+            "facebook": {
+                "url": "https://www.facebook.com/",
+                "icon": "facebook"
+            },
+            "instagram": {
+                "url": "https://www.instagram.com",
+                "icon": "instagram"
+            },
+            "pinterest": {
+                "url": "https://www.pinterest.com/",
+                "icon": "pinterest"
+            }
+        },
+        "copyright": "Copyright © 2021",
+        "designedBy": {
+            "en": "Designed by",
+            "lv": "Dizains",
+            "ru": "Дизайн"
+        }
+    },
+    "gallery": {
+        "title": {
+            "en": "Gallery",
+            "lv": "galerija",
+            "ru": "Галерея"
+        },
+        "sections": [
+            {
+                "url": "gates",
+                "title": {
+                    "en": "gates",
+                    "lv": "vārti",
+                    "ru": "ворота"
+                },
+                "about": {
+                    "en": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                    "lv": "Lorem Ipsum – tas ir teksta salikums, kuru izmanto poligrāfijā un maketēšanas darbos. Lorem Ipsum ir kļuvis par vispārpieņemtu teksta aizvietotāju kopš 16. gadsimta sākuma. Tajā laikā kāds nezināms iespiedējs izveidoja teksta fragmentu, lai nodrukātu grāmatu ar burtu paraugiem. Tas ir ne tikai pārdzīvojis piecus gadsimtus, bet bez ievērojamām izmaiņām saglabājies arī mūsdienās, pārejot uz datorizētu teksta apstrādi. Tā popularizēšanai 60-tajos gados kalpoja Letraset burtu paraugu publicēšana ar Lorem Ipsum teksta fragmentiem un, nesenā pagātnē, tādas maketēšanas programmas kā Aldus PageMaker, kuras šablonu paraugos ir izmantots Lorem Ipsum teksts.",
+                    "ru": "Lorem Ipsum - это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum."
+                },
+                "pictures": [
+                    "https://upload.wikimedia.org/wikipedia/en/a/a5/Smudge_cat.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/e/e1/Patton_during_a_welcome_home_parade_in_Los_Angeles%2C_June_9%2C_1945.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/7/73/Los_Angeles_night_aerial.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/9/94/Guido_van_Rossum_OSCON_2006_cropped.png",
+                    "https://upload.wikimedia.org/wikipedia/commons/d/d6/MacArthurParkLA.jpg"
+                ]
+            },
+            {
+                "url": "stairs",
+                "title": {
+                    "en": "stairs",
+                    "lv": "kāpnes",
+                    "ru": "лестницы"
+                },
+                "about": {
+                    "en": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                    "lv": "Lorem Ipsum – tas ir teksta salikums, kuru izmanto poligrāfijā un maketēšanas darbos. Lorem Ipsum ir kļuvis par vispārpieņemtu teksta aizvietotāju kopš 16. gadsimta sākuma. Tajā laikā kāds nezināms iespiedējs izveidoja teksta fragmentu, lai nodrukātu grāmatu ar burtu paraugiem. Tas ir ne tikai pārdzīvojis piecus gadsimtus, bet bez ievērojamām izmaiņām saglabājies arī mūsdienās, pārejot uz datorizētu teksta apstrādi. Tā popularizēšanai 60-tajos gados kalpoja Letraset burtu paraugu publicēšana ar Lorem Ipsum teksta fragmentiem un, nesenā pagātnē, tādas maketēšanas programmas kā Aldus PageMaker, kuras šablonu paraugos ir izmantots Lorem Ipsum teksts.",
+                    "ru": "Lorem Ipsum - это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum."
+                },
+                "pictures": [
+                    "https://upload.wikimedia.org/wikipedia/en/a/a5/Smudge_cat.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/e/e1/Patton_during_a_welcome_home_parade_in_Los_Angeles%2C_June_9%2C_1945.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/f/f8/Python_logo_and_wordmark.svg",
+                    "https://upload.wikimedia.org/wikipedia/commons/9/94/Guido_van_Rossum_OSCON_2006_cropped.png",
+                    "https://upload.wikimedia.org/wikipedia/commons/d/d6/MacArthurParkLA.jpg"
+                ]
+            },
+            {
+                "url": "chandeliers",
+                "title": {
+                    "en": "chandeliers",
+                    "lv": "lustras",
+                    "ru": "люстры"
+                }, 
+                "about": {
+                    "en": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                    "lv": "Lorem Ipsum – tas ir teksta salikums, kuru izmanto poligrāfijā un maketēšanas darbos. Lorem Ipsum ir kļuvis par vispārpieņemtu teksta aizvietotāju kopš 16. gadsimta sākuma. Tajā laikā kāds nezināms iespiedējs izveidoja teksta fragmentu, lai nodrukātu grāmatu ar burtu paraugiem. Tas ir ne tikai pārdzīvojis piecus gadsimtus, bet bez ievērojamām izmaiņām saglabājies arī mūsdienās, pārejot uz datorizētu teksta apstrādi. Tā popularizēšanai 60-tajos gados kalpoja Letraset burtu paraugu publicēšana ar Lorem Ipsum teksta fragmentiem un, nesenā pagātnē, tādas maketēšanas programmas kā Aldus PageMaker, kuras šablonu paraugos ir izmantots Lorem Ipsum teksts.",
+                    "ru": "Lorem Ipsum - это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum."
+                },
+                "pictures": [
+                    "https://upload.wikimedia.org/wikipedia/en/a/a5/Smudge_cat.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/5/53/Django_2.1_landing_page.png",
+                    "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+                    "https://upload.wikimedia.org/wikipedia/commons/9/94/Guido_van_Rossum_OSCON_2006_cropped.png",
+                    "https://upload.wikimedia.org/wikipedia/commons/d/d6/MacArthurParkLA.jpg"
+                ]
+            },
+            {
+                "url": "fences",
+                "title": {
+                    "en": "fences",
+                    "lv": "žogi",
+                    "ru": "ограды"
+                },
+                "about": {
+                    "en": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                    "lv": "Lorem Ipsum – tas ir teksta salikums, kuru izmanto poligrāfijā un maketēšanas darbos. Lorem Ipsum ir kļuvis par vispārpieņemtu teksta aizvietotāju kopš 16. gadsimta sākuma. Tajā laikā kāds nezināms iespiedējs izveidoja teksta fragmentu, lai nodrukātu grāmatu ar burtu paraugiem. Tas ir ne tikai pārdzīvojis piecus gadsimtus, bet bez ievērojamām izmaiņām saglabājies arī mūsdienās, pārejot uz datorizētu teksta apstrādi. Tā popularizēšanai 60-tajos gados kalpoja Letraset burtu paraugu publicēšana ar Lorem Ipsum teksta fragmentiem un, nesenā pagātnē, tādas maketēšanas programmas kā Aldus PageMaker, kuras šablonu paraugos ir izmantots Lorem Ipsum teksts.",
+                    "ru": "Lorem Ipsum - это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum."
+                },
+                "pictures": [
+                    "https://upload.wikimedia.org/wikipedia/en/a/a5/Smudge_cat.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/e/e1/Patton_during_a_welcome_home_parade_in_Los_Angeles%2C_June_9%2C_1945.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
+                    "https://upload.wikimedia.org/wikipedia/commons/9/94/Guido_van_Rossum_OSCON_2006_cropped.png",
+                    "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
+                ]
+            },
+            {
+                "url": "anchors",
+                "title": {
+                    "en": "anchors",
+                    "lv": "eņģes",
+                    "ru": "якоря"
+                },
+                "about": {
+                    "en": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                    "lv": "Lorem Ipsum – tas ir teksta salikums, kuru izmanto poligrāfijā un maketēšanas darbos. Lorem Ipsum ir kļuvis par vispārpieņemtu teksta aizvietotāju kopš 16. gadsimta sākuma. Tajā laikā kāds nezināms iespiedējs izveidoja teksta fragmentu, lai nodrukātu grāmatu ar burtu paraugiem. Tas ir ne tikai pārdzīvojis piecus gadsimtus, bet bez ievērojamām izmaiņām saglabājies arī mūsdienās, pārejot uz datorizētu teksta apstrādi. Tā popularizēšanai 60-tajos gados kalpoja Letraset burtu paraugu publicēšana ar Lorem Ipsum teksta fragmentiem un, nesenā pagātnē, tādas maketēšanas programmas kā Aldus PageMaker, kuras šablonu paraugos ir izmantots Lorem Ipsum teksts.",
+                    "ru": "Lorem Ipsum - это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum."
+                },
+                "pictures": [
+                    "https://upload.wikimedia.org/wikipedia/en/a/a5/Smudge_cat.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/e/e1/Patton_during_a_welcome_home_parade_in_Los_Angeles%2C_June_9%2C_1945.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/7/73/Los_Angeles_night_aerial.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/9/94/Guido_van_Rossum_OSCON_2006_cropped.png",
+                    "https://upload.wikimedia.org/wikipedia/commons/d/d6/MacArthurParkLA.jpg"
+                ]
+            }
+        ]
+    },
+    "info": {
+        "title": {
+            "en": "contacts",
+            "lv": "kontakti",
+            "ru": "контакты"
+        },
+        "subtitle": {
+            "en": "Aivars Oleksans SIA LАКTA",
+            "lv": "Aivars Oleksāns SIA LАКTA",
+            "ru": "Айварс Олексанс SIA LАКTA"
+        },
+        "_info": [
+            {
+                "en": "Address",
+                "lv": "Adrese",
+                "ru": "Адрес",
+                "field": "Mežkalpi\", Villasmuiža, Ropažu novads, LV-2135, Latvija"
+            }, 
+            {
+                "en": "Email",
+                "lv": "E-pasts",
+                "ru": "Адресс электронной почты",
+                "field": "lakta@inbox.lv"
+            },
+            {
+                "en": "Cell phone number",
+                "lv": "Mobīlais tālrunis",
+                "ru": "Мобильный телефон",
+                "field": "+371-294-597-76"
+            },
+            {
+                "en": "Work phone number",
+                "lv": "Darba tālrunis",
+                "ru": "Рабочий номер телефона",
+                "field": "67918677" 
+            }, 
+            {
+                "en": "Registration",
+                "lv": "Registrācijas numurs",
+                "ru": "Номер регистрации",
+                "field": "40103075713"
+            }, 
+            {
+                "en": "Bank account",
+                "lv": "Bankas konta numurs",
+                "ru": "Номер банковского счета",
+                "field": "LV34UNLA0034106763100"
+            }
+        ],
+        "slider": {
+            "time": 6,
+            "images": [
+                "https://upload.wikimedia.org/wikipedia/en/a/a5/Smudge_cat.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/e/e1/Patton_during_a_welcome_home_parade_in_Los_Angeles%2C_June_9%2C_1945.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/7/73/Los_Angeles_night_aerial.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/9/94/Guido_van_Rossum_OSCON_2006_cropped.png"
+            ]
+        }
+    },
+    "availableLanguages": [
+        "en",
+        "lv",
+        "ru"
+    ],
+    "navbar": {
+        "logoSection":{
+            "en": "Aivars Oleksans Lakta",
+            "lv": "Aivars Oleksāns Lakta",
+            "ru": "Айварс Олексанс Лакта"
+        },
+        "titles": [
+            {
+                "content": {
+                    "en": "Home",
+                    "ru": "Основная",
+                    "lv": "Galvena"
+                },
+                "link": "/"
+            },
+            {
+                "content": {
+                    "en": "Gallery",
+                    "ru": "Галлерия",
+                    "lv": "Galerija"
+                },
+                "link": "/gallery/gates"
+            },
+            {
+                "content": {
+                    "en": "About",
+                    "ru": "Про",
+                    "lv": "Par"
+                },
+                "link": "/about/intro"
+            },
+            {
+                "content": {
+                    "en": "Contacts",
+                    "ru": "Контакты",
+                    "lv": "Kontakti"
+                },
+                "link": "/info"
+            }
+        ] 
+    },
+    "main": {
+        "slider": {
+            "time": 8,
+            "labels": [
+                {
+                    "en": "Traditional craft",
+                    "lv": "Tradicionāls amats",
+                    "ru": "Традиционное ремесло"
+                },
+                {
+                    "en": "Contemporary design",
+                    "lv": "Mūsdienīgs stils",
+                    "ru": "Современный стиль"
+                },
+                {
+                    "en": "Handmade",
+                    "lv": "Rokasdarbs",
+                    "ru": "Сделано вручную"
+                }
+            ]
+        },
+        "intro": {
+            "en": "We are combining original contemporary design with traditional and ancient blacksmith technique, we are a small and creative team of blacksmiths and designers. We are located in Ropazi not far from the capital of Latvia - Riga. Our aim is simple - to design and create some of the finest metalic constructions made of non-ferrous steel, blacksteel and stainless steel, such as gates, railings, chendeliers, signboards and much more in Latvia.\nGreat and innovative design and exacting craftsmanship are always our characteristics.",
+            "lv": "Mēs apvienojam oriģinālo mūsdienu dizainu ar tradicionālo un seno kalēju tehniku, mēs esam maza un radoša kalēju un dizaineru komanda. Atrodamies Ropažos netālu no Latvijas galvaspilsētas Rīgas. Mūsu mērķis ir vienkāršs - noformēt un izveidot dažas no izcilākajām metāliskām konstrukcijām, kas izgatavotas no krāsainā tērauda, ​​melnā tērauda un nerūsējošā tērauda, ​​piemēram, vārti, margas, lustras, izkārtnes un daudz ko citu Latvijā.\nLielisks un novatorisks dizains un prasīga meistarība vienmēr ir mūsu iezīmes.",
+            "ru": "Мы сочетаем оригинальный современный дизайн с традиционной и старинной кузнечной техникой, мы небольшая творческая команда кузнецов и дизайнеров. Мы находимся в Ропажи недалеко от столицы Латвии - Риги. Наша цель проста - спроектировать и создать одни из лучших металлических конструкций из цветной и черной стали и нержавеющей стали, такие как ворота, перила, люстры, вывески и многое другое в Латвии.\nВеликолепный новаторский дизайн и высокое качество исполнения - всегда наши характеристики."
+        },
+        "images": [
+            "https://i.imgflip.com/2hf6te.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/0/09/Docker-linux-interfaces.svg",
+            "https://upload.wikimedia.org/wikipedia/commons/a/aa/Dan_Reynolds_at_LoveLoud_2018_%2843364934745%29.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/3/34/Imagine_Dragons_EP.jpeg",
+            "https://ahseeit.com//king-include/uploads/2018/11/l-41894-student-packs-up-10-secs-early-teacher-am-i-a-joke-to-you-155502837.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/0/05/Robin_Li_at_the_Web_2.0_Summit_2010_%28cropped%29.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/0/03/The_View_From_Douglas_Head%2C_Isle_Of_Man..jpg",
+            "https://media4.s-nbcnews.com/j/newscms/2021_04/3443543/210120-bernie-sanders-mittens-2-cs-1123a_c0a773ddd84a7cc579af1b16a382068b.fit-760w.jpg"
+        ]
+    },
+    "author": {
+        "word": {
+            "en": "Author",
+            "lv": "Autors",
+            "ru": "Автор"
+        },
+        "name" : "Ilya Nesterow",
+        "url": "https://github.com/IlyaNesterow"        
+    }
+}

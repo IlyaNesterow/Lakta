@@ -1,17 +1,27 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 
+import { ContentContext } from '../../utils/contexts'
 
-const Author = ({ author }) => {
+
+const Author = () => {
   const lang = useSelector(state => state.lang)
 
   return(
-    <div id="author">
-      <p>
-        <span>{ `${ author.word[ lang ] }: ` }</span>
-        <span>{ author.name[ lang ] }</span> 
-      </p>
-    </div>
+    <ContentContext.Consumer>
+      {content => 
+        <div id="author">
+          <a 
+            href={ content.author.url }
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>{ `${ content.author.word[ lang ] }: ` }</span>
+            <span>{ content.author.name }</span>
+          </a>
+        </div>
+      }
+    </ContentContext.Consumer>
   )
 }
 

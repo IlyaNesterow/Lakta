@@ -5,7 +5,7 @@ import Nav from '../../../styles/navbar'
 import { useSelector } from 'react-redux'
 import MenuLabel from '../menu/MenuLabel'
 import LogoSection from './LogoSection'
-import LanguagesAndTheme from './LanguagesAndTheme'
+import LanguagesAndTheme from '../LAndT'
 
 
 const Navbar = () => {
@@ -16,8 +16,8 @@ const Navbar = () => {
       <Link to="/">
         <LogoSection/>
       </Link>
-      <MenuLabel/>
       <Links/>
+      <MenuLabel/>
       <LanguagesAndTheme/>
     </Nav>
   )

@@ -121,12 +121,6 @@ const Modal = ({ images, index, onClose }) => {
         if(hasNext)
           handleImgChange('next')
         break
-      case 38:
-        handleZoomIn()
-        break
-      case 40:
-        handleZoomOut()
-        break
       default: 
         break
     }

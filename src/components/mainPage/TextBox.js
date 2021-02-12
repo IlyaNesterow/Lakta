@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import Container from '../../styles/textBox'
 
 
-const TextBox = ({ labels, top = '45%', left = '50%' }) => {
+const TextBox = ({ labels, top = '45%', left = '50%', className }) => {
   const [ index, setIndex ] = useState(0)
  
   const first = useRef(null)
@@ -42,7 +42,8 @@ const TextBox = ({ labels, top = '45%', left = '50%' }) => {
     <Container
       top={ top }
       left={ left }
-    >
+      className={ className }
+    > 
       <div id="text-box">
         <h2 id="prev" ref={ first }>
           { labels[ 0 ][ lang ] }

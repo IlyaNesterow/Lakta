@@ -14,6 +14,14 @@ const Page = styled.div`
     padding-left: 1rem;
     border-bottom: solid 1px #888; 
   } 
+  p{
+    color: ${ props => props.darkTheme ? '#fff' : '#111' };
+    margin: 0;  
+    padding: .7rem 10%; 
+    padding-bottom: 2rem;
+    font-size: 1rem;
+    border-bottom: solid 1px #888; 
+  }
   #scroller{
     position: fixed;
     background-color: #3377ff;
@@ -43,8 +51,8 @@ const Page = styled.div`
   @media only screen and (max-width: 1000px){
     margin-top: 3rem;
     h3{
-      margin: 1rem 5%;
-      padding-left: 0;
+      margin: 1rem 0;
+      padding-left: 1rem;
     }
   }
   @media only screen and (max-width: 1000px){
