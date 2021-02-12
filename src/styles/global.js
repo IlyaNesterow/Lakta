@@ -71,6 +71,7 @@ const GlobalStyle = createGlobalStyle`
   }
   #sub-navbar{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 60%;
     margin-left: 20%; 
@@ -163,7 +164,7 @@ const GlobalStyle = createGlobalStyle`
       font-size: 1.4rem;
     }
     #sub-navbar{
-      width: 90%;
+      max-width: 90%;
       margin-left: 5%; 
     }
   } 
