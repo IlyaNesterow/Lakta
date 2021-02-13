@@ -9,9 +9,11 @@ import Slider from '../global/slider'
 const BgImage = () => {
   const makeUpperCase = (labels) => 
     labels.map(l => {
-      const newNode = {};
-      Object.entries(l).forEach(([key, val]) => (newNode[key] = val.toUpperCase()));
-      return newNode;
+      const newNode = {}
+      Object.entries(l).forEach(([key, val]) => {
+        newNode[key] = val.toUpperCase()
+      })
+      return newNode
     }) 
 
   const shuffleLabels = (labels, steps) => {

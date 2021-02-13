@@ -6,13 +6,17 @@ const Bars = ({ amount, clickHandler, current }) => {
     const bars = []
     for(let i = 0; i < amount; i++){
       const bar = (
-        <span 
-          id={ current === i ? 'current' : '' }
-          className="bar" 
+        <div 
+          className="bar-container"
           onClick={() => clickHandler(i)}
-          key={ i }
         >
-        </span>
+          <span 
+            id={ current === i ? 'current' : '' }
+            className="bar" 
+            key={ i }
+          >
+          </span>
+        </div>
       )
       bars.push(bar)
     }

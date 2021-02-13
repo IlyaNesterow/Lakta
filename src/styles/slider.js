@@ -12,19 +12,26 @@ const Slider = styled.div`
     position: absolute;
     display: flex;
     justify-content: space-between;
-    bottom: 1rem;
+    bottom: -.5rem;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
   }
+  .bar-container{
+    width: 2rem; height: 1rem;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+  }  
   .bar{
-    width: 1rem; height: .3rem;
+    width: 100%; height: .1rem;
     background-color: ${ props => props.darkTheme ? '#333' : '#eee' };
     transition: background-color .5s;
     margin-top: .5rem;
+    display: block;
   }
   span#current{ 
-    background-color: #888;
+    background-color: #3355ff;
   } 
   .controls{
     position: absolute;

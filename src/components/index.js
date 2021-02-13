@@ -79,13 +79,7 @@ const App = () => {
 
   return (
     <>
-      <GlobalStyle 
-        darkTheme={ theme }
-        image1={ content ? content.images.menu.first : '' }
-        image2={ content ? content.images.menu.second : '' }
-        image3={ content ? content.images.menu.third : '' }
-        image4={ content ? content.images.menu.fourth : '' }
-      />
+      <GlobalStyle darkTheme={ theme }/>
       <InitialScene visible={ showInitialScene }/>
       { content !== null &&
         <ContentContext.Provider value={ content }>

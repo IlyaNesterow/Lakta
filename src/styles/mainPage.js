@@ -24,6 +24,9 @@ const Page = styled.div`
   .container:hover{ 
     background-color: ${ props => props.darkTheme ? 'rgba(0,0,0,0)' : 'rgba(255,255,255,0)' };
   }
+  h2{
+    color: ${ props => props.darkTheme ? '#eee' : '#111' };
+  }
   @media only screen and (max-width: 850px){ 
     p#summary{
       padding-left: 5%;

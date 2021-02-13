@@ -13,7 +13,6 @@ const TextBox = styled.div`
   }
   h2{
     position: absolute; 
-    color: #eac700;
     font-family: 'Roboto', sans-serif;
     font-weight: 400; 
     left: ${ props => props.left || '50%' };

@@ -22,10 +22,12 @@ const MenuTab = () => {
 
   return(
     <Container 
-      className={ opened ? 'menu-opened' : 'menu-hidden' }
       darkTheme={ theme }
     >
-      <div id="right-tab">
+      <div 
+        id="right-tab"
+        className={ opened ? 'menu-opened' : 'menu-closed'  }
+      >
         <Links 
           lang={ lang }
           theme={ theme }
@@ -36,6 +38,10 @@ const MenuTab = () => {
           <Theme/>
         </div>
       </div>
+      <div 
+        id="background"
+        className={ opened ? 'opened-background' : 'closed-background' }
+      ></div>
     </Container>
   )
 }

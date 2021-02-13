@@ -21,7 +21,7 @@ const TextBox = ({ labels, top = '45%', left = '50%', className }) => {
       ? nd.current.textContent = labels[ index < labels.length - 1 ? index: 0 ][ lang ]
       : nd.current.textContent = labels[ labels.length - 1 ][ lang ]
   }
-  
+
   useEffect(() => {
     const interval = setInterval(() => {
       if(second.current.id === 'current')
@@ -36,7 +36,7 @@ const TextBox = ({ labels, top = '45%', left = '50%', className }) => {
         : setIndex(0)
     }, 7000)
     return () => clearInterval(interval)
-  }) 
+  })  
 
   return(
     <Container

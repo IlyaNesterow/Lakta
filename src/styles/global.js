@@ -55,14 +55,6 @@ const GlobalStyle = createGlobalStyle`
     z-index: 6;
     transition: all .5s;
   } 
-  .menu-hidden{
-    transition: right .5s;
-    right: -100vw;
-  }
-  .menu-opened{ 
-    transition: right .5s;
-    right: 0;
-  }
   .visible{
     top: 0;
   }
