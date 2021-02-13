@@ -17,18 +17,14 @@ const Slider = styled.div`
     transform: translate(-50%, -50%);
     z-index: 1;
   }
-
   .bar{
-    width: 1rem; height: .2rem;
+    width: 1rem; height: .3rem;
     background-color: ${ props => props.darkTheme ? '#333' : '#eee' };
-    transition: all .5s;
+    transition: background-color .5s;
     margin-top: .5rem;
   }
- 
   span#current{ 
-    background-color: #3355ff;
-    height: .7rem;
-    margin-top: 0;
+    background-color: #888;
   } 
   .controls{
     position: absolute;
