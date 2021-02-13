@@ -2,12 +2,6 @@ import styled from 'styled-components'
 
 
 const MenuTab = styled.div`
-  position: fixed;
-  top: 4.7rem;
-  height: calc(100vh - 3.8rem);
-  width: 100vw;
-  z-index: 3;  
-
   #right-tab{
     position: absolute;
     text-align: right;
