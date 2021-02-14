@@ -10,6 +10,6 @@ script:
 after_success:
   - curl https://cli-assets.heroku.com/install.sh | sh
   - docker build -t web .
-  - heroku auth:token $HEROKU_API_KEY
+  - heroku auth:token
   - heroku container:push web --app $HEROKU_APP_NAME
   - heroku container:release web --app $HEROKU_APP_NAME
