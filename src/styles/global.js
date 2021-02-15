@@ -5,7 +5,6 @@ const GlobalStyle = createGlobalStyle`
   ::-webkit-scrollbar { 
     display: none; 
   }
-  
   * {
     margin: 0;
     padding: 0;
@@ -18,10 +17,9 @@ const GlobalStyle = createGlobalStyle`
     -webkit-user-select: none;
     -ms-user-select: none;
   }
-
   body {
     transition: background-color .2s;
-    background-color: ${ props => props.darkTheme ? '#333' : '#fefefe' };
+    background-color: ${ props => props.darkTheme ? '#111' : '#fefefe' };
     position: relative;
     min-height: 100vh;
   }
