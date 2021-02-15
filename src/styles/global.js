@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     transition: background-color .2s;
-    background-color: ${ props => props.darkTheme ? '#333' : '#fefefe' };
+    background-color: ${ props => props.darkTheme ? '#111' : '#fefefe' };
     position: relative;
     min-height: 100vh;
   }
