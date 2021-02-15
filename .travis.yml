@@ -7,10 +7,8 @@ before_install:
 script:
   - docker run -e CI=true ilyanesterow/test npm run test  -- --coverage
 
-#The crap below does not work due to docker that logs out 'no basic auth credentials'
 after_success:
   - curl https://cli-assets.heroku.com/install.sh | sh
-  #Though there are basic auth credentials
   - docker build -t web .
   - heroku auth:token
   - heroku container:login 
