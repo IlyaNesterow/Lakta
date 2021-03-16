@@ -72,7 +72,8 @@ const GlobalStyle = createGlobalStyle`
     font-family: Ubuntu, sans-serif;
     display: block;
     font-size: 1rem;
-    margin: .5rem;
+    margin-bottom: .5rem;
+    margin-left: .3rem;
     color: ${ props => props.darkTheme ? '#eee' : '#222' };
   } 
   div#pic-modal{
@@ -156,7 +157,7 @@ const GlobalStyle = createGlobalStyle`
       font-size: 1.4rem;
     }
     #sub-navbar{
-      max-width: 90%;
+      width: 90%;
       margin-left: 5%; 
     }
   } 
