@@ -159,6 +159,7 @@ const GlobalStyle = createGlobalStyle`
     #sub-navbar{
       width: 90%;
       margin-left: 5%; 
+      justify-content: center;
     }
   } 
   @media only screen and (max-width: 600px){ 
