@@ -70,6 +70,7 @@ const GlobalStyle = createGlobalStyle`
   }
   #sub-navbar a{
     font-family: Ubuntu, sans-serif;
+    display: block;
     font-size: 1rem;
     margin: .5rem;
     color: ${ props => props.darkTheme ? '#eee' : '#222' };
