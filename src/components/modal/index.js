@@ -11,4 +11,4 @@ const Main = (props) => (
   </Portal>
 )
 
-export default Main
+export default React.memo(Main)

@@ -11,4 +11,4 @@ const SubField = ({ fieldName, fieldValue }) => (
   </div>
 )
 
-export default SubField
+export default React.memo(SubField)

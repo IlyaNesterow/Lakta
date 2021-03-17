@@ -12,4 +12,4 @@ const SocialNetwork = ({ url, icon }) => (
   </a>
 )
 
-export default SocialNetwork
+export default React.memo(SocialNetwork)

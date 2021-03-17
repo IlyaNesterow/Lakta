@@ -19,4 +19,4 @@ const Images = ({ pics }) => {
   )
 }
 
-export default Images
+export default React.memo(Images)

@@ -163,4 +163,4 @@ const Modal = ({ images, index, onClose }) => {
   )
 }
 
-export default Modal
+export default React.memo(Modal)

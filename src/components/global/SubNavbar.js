@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useMemo, memo } from 'react'
 import { NavLink } from 'react-router-dom'
 
 
 const SubNavbar = ({ content, lang, ctx = 'ctx' }) => {
-  const generateLinks = (data) => 
-    data.map(l => 
+  const generateLinks = useMemo(() => 
+    content.map(l => 
       <NavLink
         to={ `/${ l.url }` }
         key={ l.url }
@@ -15,13 +15,13 @@ const SubNavbar = ({ content, lang, ctx = 'ctx' }) => {
       >{
         l[ ctx ][ lang ].toUpperCase()
       }</NavLink>
-    )
+    ), [ content, lang, ctx ])
   
   return(
     <div id="sub-navbar">  
-      { generateLinks(content) }
+      { generateLinks }
     </div>
   )
 }
 
-export default SubNavbar
+export default memo(SubNavbar)

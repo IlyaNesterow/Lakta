@@ -26,4 +26,4 @@ const Arrows = ({ hasNext, hasPrev, handleNextClick, handlePrevClick }) => (
   </>
 )
 
-export default Arrows
+export default React.memo(Arrows)

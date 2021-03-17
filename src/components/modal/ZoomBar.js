@@ -20,4 +20,4 @@ const ZoomBar = ({ onZoomIn, onZoomOut, unableToZoomOut, unableToZoomIn }) => (
   </div>
 )
 
-export default ZoomBar
+export default React.memo(ZoomBar)

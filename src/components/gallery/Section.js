@@ -20,4 +20,4 @@ const Section = ({ data, lang }) => {
   )
 } 
 
-export default Section
+export default React.memo(Section)

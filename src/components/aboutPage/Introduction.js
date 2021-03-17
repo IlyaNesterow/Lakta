@@ -21,4 +21,4 @@ const Introduction = ({ lang, theme }) => (
   </ContentContext.Consumer>
 )
 
-export default Introduction
+export default React.memo(Introduction)

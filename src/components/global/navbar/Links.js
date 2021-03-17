@@ -38,4 +38,4 @@ const Links = ({ id = 'nav-link-area', navLinkId = 'nav-link', onClick = () => {
   )
 }
 
-export default Links
+export default React.memo(Links)

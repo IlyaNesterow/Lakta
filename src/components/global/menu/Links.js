@@ -32,4 +32,4 @@ const Links = ({ lang, theme, onClick }) => {
   )
 }
 
-export default Links
+export default React.memo(Links)

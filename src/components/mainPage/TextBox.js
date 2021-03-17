@@ -57,4 +57,4 @@ const TextBox = ({ labels, top = '45%', left = '50%', className }) => {
   )
 }
 
-export default TextBox
+export default React.memo(TextBox)

@@ -23,4 +23,4 @@ const Scene = ({ visible }) => {
   )
 }
 
-export default Scene
+export default React.memo(Scene)

@@ -22,4 +22,4 @@ const Logo = ({ height = '24pt', width = '25pt', fill = '#3377ff' }) => (
   </svg>
 )
 
-export default Logo
+export default React.memo(Logo)

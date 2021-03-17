@@ -24,4 +24,4 @@ const Ribbon = ({ images, transformX, rows = 1 }) => {
   )
 }
 
-export default Ribbon
+export default React.memo(Ribbon)

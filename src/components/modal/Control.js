@@ -12,4 +12,4 @@ const Control = ({ onClick, id, icon, className = 'modal-control' }) => (
   </div>
 )
 
-export default Control
+export default React.memo(Control)

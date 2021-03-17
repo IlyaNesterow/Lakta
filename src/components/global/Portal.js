@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
 
@@ -21,4 +21,4 @@ const Portal = (props) => {
   )
 }
 
-export default Portal
+export default React.memo(Portal)

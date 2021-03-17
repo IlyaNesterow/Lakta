@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDoubleDown, faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons'
 
@@ -24,7 +24,7 @@ const Scroller = () => {
     }
   }
 
-  const scrollSomewhere = () => {
+  const scrollSomewhere = useCallback(() => {
     setSyntheticScrilling(true)
     if(directionUp){
       window.scroll({
@@ -42,13 +42,13 @@ const Scroller = () => {
       setDirectionUp(true)
     }
     setTimeout(() => setSyntheticScrilling(false), 500)
-  }
+  }, [ directionUp ])
   
   return(
     <div 
       id="scroller"
       className={ visible ? 'visible' : 'hidden' }
-      onClick={() => scrollSomewhere()}
+      onClick={ scrollSomewhere }
     >
       <FontAwesomeIcon
         icon={ directionUp ? faAngleDoubleUp : faAngleDoubleDown }

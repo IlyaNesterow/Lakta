@@ -56,41 +56,10 @@ const Images = ({ pics, imgOnClick, colNum = 3 }) => {
   }
   
   return(
-    <Container
-      cols={ cols } 
-    >
+    <Container cols={ cols }>
       { generateSections() }
     </Container>
   )
 }
 
-export default Images
-
-/*const images = pics.map((img, i) => {
-    const subtractFive = (num) => 
-      num > 4
-        ? subtractFive(num - 5)
-        : num
-
-    let index = subtractFive(i)
- 
-    const props = {
-      src: img,
-      key: img + i,
-      onClick: () => {
-        imgOnClick(i + startingPoint)
-      }
-    }
-
-    return index > 2 
-      ? <img 
-          { ...props }
-          alt="Gallery item"
-          className={`two-images ${ index === 3 ? 'right-most-image' : 'left-most-image' }`}
-        />
-      : <img
-          { ...props }
-          alt="Gallery item"
-          className="three-images"
-        />
-  })*/
+export default React.memo(Images)

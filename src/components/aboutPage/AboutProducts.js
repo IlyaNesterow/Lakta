@@ -21,4 +21,4 @@ const About = ({ lang, theme }) => (
   </ContentContext.Consumer>
 )
 
-export default About
+export default React.memo(About)

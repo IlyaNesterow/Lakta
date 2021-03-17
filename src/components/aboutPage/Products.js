@@ -36,4 +36,4 @@ const Products = ({ lang, theme }) => {
   )
 }
 
-export default Products
+export default React.memo(Products)
